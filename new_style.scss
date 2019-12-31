@@ -73,7 +73,7 @@ $gates : ($gates-layer-1, $gates-layer-2);
 
 
 // —————————————————————————————————— LEVEL 2 ——————————————————————————————————
-@include setupDiodes(5, 2);
+@include setupDiodes(4, 2);
 
 // LAYER 1
 $cables-layer-1-level-2 : (1, 2, 1, 2);
@@ -87,7 +87,7 @@ $cables-layer-2-level-2-schema : (1, 1, 2, 2),
 // LAYER 3
 $cables-layer-3-level-2 : 3;
 
-$cables-layer-3-level-2-schema : (1, 1, 1, 1),
+$cables-layer-3-level-2-schema : (1, 1, a, a),
 null;
 
 $layers-level-2 : ($cables-layer-1-level-2, $cables-layer-2-level-2, $cables-layer-3-level-2);
@@ -95,4 +95,4 @@ $schemas-level-2 : (null, $cables-layer-2-level-2-schema, $cables-layer-3-level-
 @include setupCableLayers($layers-level-2, $schemas-level-2, 4, 2);
 
 
-@include setupVictory((1, 1, 1, 1, 0), 2);
+@include setupVictory((1, 1, a, a), 2); // TODO setup OR !! 
