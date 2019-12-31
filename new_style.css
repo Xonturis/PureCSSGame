@@ -1,0 +1,717 @@
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes diode {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@keyframes diode {
+  0% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+            transform: scale(0.5);
+  }
+}
+
+@-webkit-keyframes victory {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes victory {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div[class^="victory"] {
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  background-image: url("./bg2.jpg");
+  background-size: contain;
+}
+
+input[type="checkbox"] {
+  position: absolute;
+  top: -100px;
+}
+
+container {
+  display: block;
+  margin: 10vh 10vw 10vh 10vw;
+  min-height: 80vh;
+  min-width: 80vw;
+  background-image: url("./fg2.jpg");
+  background-size: 100%;
+  -webkit-box-shadow: 0px 0px 20px 14px;
+          box-shadow: 0px 0px 20px 14px;
+}
+
+.diode-1-level-1 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  height: 40px;
+}
+
+.checkbox-1-level-1 ~ container > level-1 > .diode-1-level-1 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-1-level-1:checked ~ container > level-1 > .diode-1-level-1 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-2-level-1 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  height: 40px;
+}
+
+.checkbox-2-level-1 ~ container > level-1 > .diode-2-level-1 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-2-level-1:checked ~ container > level-1 > .diode-2-level-1 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-3-level-1 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  height: 40px;
+}
+
+.checkbox-3-level-1 ~ container > level-1 > .diode-3-level-1 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-3-level-1:checked ~ container > level-1 > .diode-3-level-1 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-4-level-1 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+  margin: 0;
+  padding: 0;
+  width: 20vw;
+  height: 40px;
+}
+
+.checkbox-4-level-1 ~ container > level-1 > .diode-4-level-1 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-4-level-1:checked ~ container > level-1 > .diode-4-level-1 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/*
+   direction :
+     * 1 = droite
+     * 2 = gauche
+*/
+.cable-1-layer-1-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+}
+
+.checkbox-1-level-1:checked ~ container > level-1 > .cable-1-layer-1-level-1 {
+  background-color: green;
+}
+
+.cable-2-layer-1-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+}
+
+.checkbox-2-level-1:checked ~ container > level-1 > .cable-2-layer-1-level-1 {
+  background-color: green;
+}
+
+.cable-3-layer-1-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+}
+
+.checkbox-3-level-1:checked ~ container > level-1 > .cable-3-layer-1-level-1 {
+  background-color: green;
+}
+
+.cable-4-layer-1-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+}
+
+.checkbox-4-level-1:checked ~ container > level-1 > .cable-4-layer-1-level-1 {
+  background-color: green;
+}
+
+.cable-1-layer-2-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+}
+
+/*
+            
+            */
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ container > level-1 > .cable-1-layer-2-level-1 {
+  background-color: green;
+}
+
+.cable-2-layer-2-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+}
+
+/*
+            
+            */
+.checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 > .cable-2-layer-2-level-1 {
+  background-color: green;
+}
+
+.cable-1-layer-3-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 70.71068px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+}
+
+/*
+            
+            */
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 > .cable-1-layer-3-level-1 {
+  background-color: green;
+}
+
+/*
+Number of layers : 2
+Layers : 0, 0, 0
+*/
+.gate-1-layer-1-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 100px));
+          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 100px));
+}
+
+.gate-2-layer-1-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 100px));
+          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 100px));
+}
+
+.gate-1-layer-2-level-1 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 200px));
+          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 200px));
+}
+
+.victory-level-1 {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: red;
+  -webkit-transform: translateX(calc(40vw - 50px)) translateY(10px);
+          transform: translateX(calc(40vw - 50px)) translateY(10px);
+}
+
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 {
+  -webkit-animation: 2s ease-in-out 3s 1 victory forwards;
+          animation: 2s ease-in-out 3s 1 victory forwards;
+}
+
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-2 {
+  display: inline;
+  -webkit-animation: 2s ease-in-out 3s 1 appear forwards;
+          animation: 2s ease-in-out 3s 1 appear forwards;
+}
+
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 > .victory-level-1 {
+  background-color: green;
+}
+
+.diode-1-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
+  margin: 0;
+  padding: 0;
+  width: 16vw;
+  height: 40px;
+}
+
+.checkbox-1-level-2 ~ container > level-2 > .diode-1-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-1-level-2:checked ~ container > level-2 > .diode-1-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-2-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(16vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(16vw);
+  margin: 0;
+  padding: 0;
+  width: 16vw;
+  height: 40px;
+}
+
+.checkbox-2-level-2 ~ container > level-2 > .diode-2-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-2-level-2:checked ~ container > level-2 > .diode-2-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-3-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(32vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(32vw);
+  margin: 0;
+  padding: 0;
+  width: 16vw;
+  height: 40px;
+}
+
+.checkbox-3-level-2 ~ container > level-2 > .diode-3-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-3-level-2:checked ~ container > level-2 > .diode-3-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-4-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(48vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(48vw);
+  margin: 0;
+  padding: 0;
+  width: 16vw;
+  height: 40px;
+}
+
+.checkbox-4-level-2 ~ container > level-2 > .diode-4-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-4-level-2:checked ~ container > level-2 > .diode-4-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-5-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(64vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(64vw);
+  margin: 0;
+  padding: 0;
+  width: 16vw;
+  height: 40px;
+}
+
+.checkbox-5-level-2 ~ container > level-2 > .diode-5-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-5-level-2:checked ~ container > level-2 > .diode-5-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cable-1-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+}
+
+.checkbox-1-level-2:checked ~ container > level-2 > .cable-1-layer-1-level-2 {
+  background-color: green;
+}
+
+.cable-2-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+}
+
+.checkbox-2-level-2:checked ~ container > level-2 > .cable-2-layer-1-level-2 {
+  background-color: green;
+}
+
+.cable-3-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+}
+
+.checkbox-3-level-2:checked ~ container > level-2 > .cable-3-layer-1-level-2 {
+  background-color: green;
+}
+
+.cable-4-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+}
+
+.checkbox-4-level-2:checked ~ container > level-2 > .cable-4-layer-1-level-2 {
+  background-color: green;
+}
+
+.cable-1-layer-2-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+}
+
+/*
+            
+            */
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ container > level-2 > .cable-1-layer-2-level-2 {
+  background-color: green;
+}
+
+.cable-2-layer-2-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+}
+
+/*
+                    3
+                    */
+/*
+                    4
+                    */
+/*
+            3, 4, 4, 4
+            */
+container > level-2 > .cable-2-layer-2-level-2 {
+  background-color: green;
+}
+
+.cable-1-layer-3-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 70.71068px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+}
+
+/*
+            
+            */
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ container > level-2 > .cable-1-layer-3-level-2 {
+  background-color: green;
+}
+
+container > level-2 {
+  display: none;
+  opacity: 0;
+}
+
+.victory-level-2 {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: red;
+  -webkit-transform: translateX(calc(40vw - 50px)) translateY(10px);
+          transform: translateX(calc(40vw - 50px)) translateY(10px);
+}
+
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-5-level-2:not(:checked) ~ container > level-2 {
+  -webkit-animation: 2s ease-in-out 3s 1 victory forwards;
+          animation: 2s ease-in-out 3s 1 victory forwards;
+}
+
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-5-level-2:not(:checked) ~ container > level-3 {
+  display: inline;
+  -webkit-animation: 2s ease-in-out 3s 1 appear forwards;
+          animation: 2s ease-in-out 3s 1 appear forwards;
+}
+
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-5-level-2:not(:checked) ~ container > level-2 > .victory-level-2 {
+  background-color: green;
+}
+/*# sourceMappingURL=new_style.css.map */

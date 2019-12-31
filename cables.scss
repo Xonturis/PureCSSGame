@@ -1,0 +1,103 @@
+@import "trigo";
+
+@mixin setupCableLayer($layer, $layerno, $level, $number-of-inputs, $schema:null) {
+    $number-of-cables: length($layer);
+    $number-of-cable-inputs: $number-of-inputs / $layerno;
+    $number-of-cable-inputs: $number-of-cable-inputs - $number-of-cable-inputs % 1;
+    $positionner: (($container-width) / $number-of-cable-inputs);
+    $gate-layers: $layerno - 1;
+
+    @if ($gate-layers < 0) {
+        $gate-layers: 0;
+    }
+
+    @for $cable from 1 through $number-of-cables {
+        $selector : ".cable-#{$cable}-layer-#{$layerno}-level-#{$level}";
+
+        #{$selector} {
+            position: absolute;
+            display: inline-block;
+            margin: 0;
+            padding: 0;
+            background: $cable-color-off;
+            width: $cable-width;
+            height: $cable-height;
+
+            transform-origin: bottom left;
+            $tx: $positionner * $cable - $positionner / 2;
+            $ty : calc(#{$container-height} - #{$diode-top} - #{($cable-dimensions * ($layerno))} - #{$gate-height * $gate-layers});
+
+            @if (nth($layer, $cable)==1) {
+                transform: translateX($tx) translateY($ty) rotate(45deg);
+            }
+
+            @else if (nth($layer, $cable)==2) {
+                transform: translateX($tx) translateY($ty) rotate(-45deg);
+            }
+
+            @else {
+                height: $cable-dimensions;
+                transform: translateX($tx) translateY($ty)
+            }
+        }
+
+        @if ($layerno==1) {
+            .checkbox-#{$cable}-level-#{$level}:checked~container>level-#{$level}>#{$selector} {
+                background-color: $cable-color-on;
+            }
+        }
+
+        @else {
+            $cable-schema: nth($schema, $cable);
+            $number-of-inputs: length($cable-schema);
+            $supra-selector: "";
+            $ors: ();
+
+            @for $requirementno from 1 through $number-of-inputs {
+                $value: nth($cable-schema, $requirementno);
+
+                @if ($value==0) {
+                    $supra-selector : $supra-selector+".checkbox-#{$requirementno}-level-#{$level}:not(:checked) ~ ";
+                }
+
+                @else if ($value==1) {
+                    $supra-selector : $supra-selector+".checkbox-#{$requirementno}-level-#{$level}:checked ~ ";
+                }
+
+                @else if($value !=2) {
+
+                    // OR
+                    /*
+                    #{$requirementno}
+                    */
+                    $ors: append($ors, $requirementno, comma);
+
+                    @for $orno from $requirementno+1 through $number-of-inputs {
+                        @if ($orno <=$number-of-inputs) {
+                            @if (nth($cable-schema, $orno)==$value && index($ors, $value)==null) {
+                                $ors: append($ors, $orno, comma);
+                            }
+                        }
+                    }
+                }
+            }
+
+            /*
+            #{$ors}
+            */
+            $supra-selector : "#{$supra-selector}container>level-#{$level}>#{$selector}";
+
+            #{$supra-selector} {
+                background-color: green;
+            }
+        }
+    }
+}
+
+@mixin setupCableLayers($layers, $schemas, $number-of-inputs, $level) {
+    $number-of-layers: length($layers);
+
+    @for $layer from 1 through $number-of-layers {
+        @include setupCableLayer(nth($layers, $layer), $layer, $level, $number-of-inputs, nth($schemas, $layer));
+    }
+}

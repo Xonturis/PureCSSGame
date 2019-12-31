@@ -1,0 +1,21 @@
+@import "trigo";
+
+$container-height : 80vh;
+$container-width : 80vw;
+
+$diode-height : 40px;
+$diode-margin : 10px;
+$diode-top : $diode-height * 2;
+
+$cable-width : 1px;
+$cable-height : 100px;
+$cable-dimensions : $cable-height * cos(45deg);
+$cable-color-off : red;
+$cable-color-on : green;
+
+$gate-width : 50px;
+$gate-height : 50px;
+
+$victory-width : 100px;
+$victory-height : 50px;
+$victory-margin : 10px;

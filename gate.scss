@@ -1,0 +1,41 @@
+@mixin setupGateLayer($gates, $number-of-inputs, $layerno, $level) {
+    $number-of-gates: length($gates);
+    $number-of-cable-inputs: $number-of-inputs / ($layerno);
+    $number-of-cable-inputs: $number-of-cable-inputs - $number-of-cable-inputs % 1;
+    $positionner: (($container-width) / $number-of-cable-inputs);
+
+    @for $gateno from 1 through $number-of-gates {
+        $gate: nth($gates, $gateno);
+
+        @if $gate==0 {
+            // Gate == 0 means AND gate
+            $selector : ".gate-#{$gateno}-layer-#{$layerno}-level-#{$level}";
+
+            #{$selector} {
+                position: absolute;
+                display: inline-block;
+                margin: 0;
+                padding: 0;
+                background: red;
+                width: $gate-width;
+                height: $gate-height;
+                transform-origin: top center;
+                $tx: calc(#{($positionner * $gateno - $positionner / 2) * 2} - #{($gate-width / 2)});
+                $ty : calc(#{$container-height} - #{$diode-top} - #{(( $cable-dimensions * cos(45deg) ) * ( 2 * $layerno))});
+                transform: translateX($tx) translateY($ty);
+            }
+        }
+    }
+}
+
+@mixin setupGateLayers($gate-layers, $number-of-inputs, $level) {
+    $number-of-layers: length($gate-layers);
+
+    /*
+Number of layers : #{$number-of-layers}
+Layers : #{$gates}
+*/
+    @for $gateno from 1 through $number-of-layers {
+        @include setupGateLayer(nth($gates, $gateno), $number-of-inputs, $gateno, $level);
+    }
+}

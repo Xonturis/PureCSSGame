@@ -1,0 +1,50 @@
+@mixin setupVictory($secret, $level) {
+    @if ($level !=1) {
+        container>level-#{$level} {
+            display: none;
+            opacity: 0;
+        }
+    }
+
+    .victory-level-#{$level} {
+        position: absolute;
+        width: $victory-width;
+        height: $victory-height;
+
+        background: red;
+
+        transform: translateX(calc(#{$container-width / 2} - #{$victory-width / 2})) translateY($victory-margin);
+    }
+
+    $number-of-inputs: length($secret);
+    $supra-selector: "";
+
+    @for $requirementno from 1 through $number-of-inputs {
+        @if (nth($secret, $requirementno)==0) {
+            $supra-selector : $supra-selector+".checkbox-#{$requirementno}-level-#{$level}:not(:checked) ~ ";
+        }
+
+        @if (nth($secret, $requirementno)==1) {
+            $supra-selector : $supra-selector+".checkbox-#{$requirementno}-level-#{$level}:checked ~ ";
+        }
+    }
+
+    $supra-selector-victory : "#{$supra-selector}container>level-#{$level}>.victory-level-#{$level}";
+    $supra-selector-level : "#{$supra-selector}container>level-#{$level}";
+    $supra-selector-next-level : "#{$supra-selector}container>level-#{$level + 1}";
+
+    #{$supra-selector-level} {
+        animation: 2s ease-in-out 3s 1 victory forwards;
+    }
+
+    #{$supra-selector-next-level} {
+        display: inline;
+        animation: 2s ease-in-out 3s 1 appear forwards;
+    }
+
+
+    #{$supra-selector-victory} {
+        background-color: green;
+    }
+
+}

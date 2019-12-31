@@ -1,0 +1,39 @@
+@mixin diodeBG($onoff) {
+    background-image: url("diode#{$onoff}.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin diodeConstructor($diodes, $diode) {
+    display: inline-block;
+    position: absolute;
+    $diode-width: $container-width / $diodes;
+    $ty : calc(#{$container-height} - #{$diode-height} - #{$diode-margin});
+    $tx: $diode-width * ($diode - 1);
+    transform-origin: bottom center;
+    transform: translateY($ty) translateX($tx);
+    margin: 0;
+    padding: 0;
+    width: $diode-width;
+    height: $diode-height;
+}
+
+@mixin onOff($diodes, $diode, $level) {
+    .diode-#{$diode}-level-#{$level} {
+        @include diodeConstructor($diodes, $diode);
+    }
+
+    .checkbox-#{$diode}-level-#{$level}~container>level-#{$level}>.diode-#{$diode}-level-#{$level} {
+        @include diodeBG("Off");
+    }
+
+    .checkbox-#{$diode}-level-#{$level}:checked~container>level-#{$level}>.diode-#{$diode}-level-#{$level} {
+        @include diodeBG("On");
+    }
+}
+
+@mixin setupDiodes($diodes, $level) {
+    @for $diode from 1 through $diodes {
+        @include onOff($diodes, $diode, $level);
+    }
+}
