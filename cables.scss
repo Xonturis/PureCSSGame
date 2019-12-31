@@ -12,7 +12,7 @@
     }
 
     @for $cable from 1 through $number-of-cables {
-        $selector : "container>level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level}";
+        $selector : "container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level}";
 
         #{$selector} {
             position: absolute;
@@ -42,7 +42,7 @@
         }
 
         @if ($layerno==1) {
-            .checkbox-#{$cable}-level-#{$level}:checked~container>level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level} {
+            .checkbox-#{$cable}-level-#{$level}:checked~container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level} {
                 background-color: $cable-color-on;
             }
         }

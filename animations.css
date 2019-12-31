@@ -53,38 +53,46 @@
 }
 
 @-webkit-keyframes disappear {
-  to {
-    top: -100px;
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  from {
-    top: 0;
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 
 @keyframes disappear {
-  to {
-    top: -100px;
+  0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  from {
-    top: 0;
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 
 @-webkit-keyframes appear {
-  from {
-    top: -100px;
+  0% {
+    opacity: 0;
   }
-  to {
-    top: 0;
+  100% {
+    opacity: 1;
   }
 }
 
 @keyframes appear {
-  from {
-    top: -100px;
+  0% {
+    opacity: 0;
   }
-  to {
-    top: 0;
+  100% {
+    opacity: 1;
   }
 }
 /*# sourceMappingURL=animations.css.map */

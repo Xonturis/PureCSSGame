@@ -1,11 +1,6 @@
 @import "string-utils";
 
 @mixin setupVictory($secret, $level) {
-    @if ($level !=1) {
-        container>level-#{$level} {
-            display: none;
-        }
-    }
 
     .victory-level-#{$level} {
         position: absolute;
@@ -68,19 +63,17 @@
         $supra-selector: $supra-selector + "//SELECTOR//";
     }
 
-    $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container>level-#{$level}>.victory-level-#{$level}");
-    $supra-selector-level : str-replace($supra-selector, "//SELECTOR//", "container>level-#{$level}");
-    $supra-selector-next-level : str-replace($supra-selector, "//SELECTOR//", "container>level-#{$level + 1}");
-    $supra-selector-container : str-replace($supra-selector, "//SELECTOR//", "container");
+    $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container level-#{$level}>.victory-level-#{$level}");
+    $supra-selector-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level}");
+    $supra-selector-next-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level + 1}");
 
     #{$supra-selector-level} {
-        display: none;
-        animation: 2s ease-in-out 3s 1 disappear forwards;
+        animation: 2s ease-in-out 1 disappear forwards !important;
     }
 
     #{$supra-selector-next-level} {
         display: inline;
-        animation: 2s ease-in-out 3s 1 appear;
+        animation: 2s ease-in-out 1s 1 appear forwards;
     }
 
     #{$supra-selector-victory} {

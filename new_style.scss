@@ -5,6 +5,7 @@
 @import "diodes";
 @import "cables";
 @import "victory";
+@import "levels";
 
 div[class^="victory"] {
     text-align: center;
@@ -31,7 +32,9 @@ container {
     box-shadow: 0px 0px 20px 14px;
 }
 
-// —————————————————————————————————— LEVEL 1 ——————————————————————————————————
+/* —————————————————————————————————— LEVEL 1 —————————————————————————————————— */
+@include setupLevel(1);
+
 // Setup diodes for level 1 (4 diodes)
 @include setupDiodes(4, 1);
 
@@ -72,7 +75,8 @@ $gates : ($gates-layer-1, $gates-layer-2);
 @include setupVictory((1, 1, 1, 1), 1);
 
 
-// —————————————————————————————————— LEVEL 2 ——————————————————————————————————
+/* —————————————————————————————————— LEVEL 2 —————————————————————————————————— */
+@include setupLevel(2);
 @include setupDiodes(4, 2);
 
 // LAYER 1

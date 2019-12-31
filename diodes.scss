@@ -23,11 +23,11 @@
         @include diodeConstructor($diodes, $diode);
     }
 
-    .checkbox-#{$diode}-level-#{$level}~container>level-#{$level}>.diode-#{$diode}-level-#{$level} {
+    .checkbox-#{$diode}-level-#{$level}~container level-#{$level}>.diode-#{$diode}-level-#{$level} {
         @include diodeBG("Off");
     }
 
-    .checkbox-#{$diode}-level-#{$level}:checked~container>level-#{$level}>.diode-#{$diode}-level-#{$level} {
+    .checkbox-#{$diode}-level-#{$level}:checked~container level-#{$level}>.diode-#{$diode}-level-#{$level} {
         @include diodeBG("On");
     }
 }
