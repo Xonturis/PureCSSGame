@@ -50,6 +50,8 @@
     $supra-selector: $supra-selector+"//SELECTOR//";
     $or-selector: "";
 
+    /*Supra Selector pre format :
+#{$supra-selector}*/
     @each $pair,
     $list-of-or in $ors {
 
@@ -65,6 +67,8 @@
         $supra-selector: $or-selector;
     }
 
+    /*Supra Selector post format :
+#{$supra-selector}*/
     $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container level-#{$level}>.victory-level-#{$level}");
     $supra-selector-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level}");
     $supra-selector-next-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level + 1}");

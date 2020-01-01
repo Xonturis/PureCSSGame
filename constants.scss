@@ -9,7 +9,7 @@ $diode-top : $diode-height * 2;
 
 $cable-width : 1px;
 $cable-height : 100px;
-$cable-dimensions : $cable-height * cos(45deg);
+$cable-dimensions : ($cable-width + $cable-height) * cos(45deg);
 $cable-color-off : red;
 $cable-color-on : green;
 
