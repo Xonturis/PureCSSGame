@@ -34,6 +34,10 @@
                         $list-of-ors: map-get($ors, $value);
 
                         @if not index($list-of-ors, $orno) {
+                            @if not $list-of-ors {
+                                $supra-selector: $supra-selector+"//#{$value}//";
+                            }
+
                             $list-of-ors: append($list-of-ors, $orno, comma);
                             $ors: map-merge($ors, ($value : $list-of-ors));
                         }
@@ -43,6 +47,7 @@
         }
     }
 
+    $supra-selector: $supra-selector+"//SELECTOR//";
     $or-selector: "";
 
     @each $pair,
@@ -50,17 +55,14 @@
 
         @each $or in $list-of-or {
             @if $or {
-                $or-selector : $or-selector+"#{$supra-selector}.checkbox-#{$or}-level-#{$level}:checked ~ //SELECTOR//, ";
+                $or-selector : $or-selector+str-replace($supra-selector, "//#{$pair}//", ".checkbox-#{$or}-level-#{$level}:checked ~ ")+", ";
             }
         }
     }
 
     @if $or-selector !="" {
+        $or-selector: str-slice($or-selector, 1, length($or-selector) - 4);
         $supra-selector: $or-selector;
-    }
-
-    @else {
-        $supra-selector: $supra-selector + "//SELECTOR//";
     }
 
     $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container level-#{$level}>.victory-level-#{$level}");

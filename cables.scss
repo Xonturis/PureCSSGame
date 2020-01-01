@@ -74,6 +74,10 @@
                                 $list-of-ors: map-get($ors, $value);
 
                                 @if not index($list-of-ors, $orno) {
+                                    @if not $list-of-ors {
+                                        $supra-selector: $supra-selector+"//#{$value}//";
+                                    }
+
                                     $list-of-ors: append($list-of-ors, $orno, comma);
                                     $ors: map-merge($ors, ($value : $list-of-ors));
                                 }
@@ -83,6 +87,8 @@
                 }
             }
 
+            $supra-selector : $supra-selector+$selector;
+
             $or-selector: "";
 
             @each $pair,
@@ -90,7 +96,8 @@
 
                 @each $or in $list-of-or {
                     @if $or {
-                        $or-selector : $or-selector+"#{$supra-selector}.checkbox-#{$or}-level-#{$level}:checked ~ #{$selector}, ";
+                        $or-selector : $or-selector+str-replace($supra-selector, "//#{$pair}//", ".checkbox-#{$or}-level-#{$level}:checked ~ ")+", ";
+
                     }
                 }
             }
@@ -104,7 +111,7 @@
             }
 
             @if ($supra-selector !=""and $or-selector=="") {
-                $supra-selector : "#{$supra-selector}#{$selector}";
+                //$supra-selector : "#{$supra-selector}#{$selector}";
 
                 #{$supra-selector} {
                     background-color: green;
