@@ -50,16 +50,52 @@
     $supra-selector: $supra-selector+"//SELECTOR//";
     $or-selector: "";
 
-    /*Supra Selector pre format :
-#{$supra-selector}*/
-    @each $pair,
-    $list-of-or in $ors {
 
-        @each $or in $list-of-or {
-            @if $or {
-                $or-selector : $or-selector+str-replace($supra-selector, "//#{$pair}//", ".checkbox-#{$or}-level-#{$level}:checked ~ ")+", ";
+
+    // ".checkbox-#{$or}-level-#{$level}:checked ~ "
+
+    @if index(map-keys($ors), a) !=null {
+        $supra-selector: $supra-selector+", ";
+        $or-selector: "";
+        $number-of-possibilities: length(map-get($ors, a)) - 1;
+
+        @each $pair,
+        $list in $ors {
+            @if $pair !=a {
+                $number-of-possibilities: $number-of-possibilities * (length($list) - 1);
             }
         }
+
+        /*  Supra Selector prepre format :
+#{$supra-selector}*/
+        /*possibilities :
+        #{$number-of-possibilities}*/
+        @for $poss from 1 through $number-of-possibilities {
+            $temp-selector: $supra-selector;
+
+            @each $val in map-keys($ors) {
+                $temp-selector : str-replace($temp-selector, "//#{$val}//", "//#{$val}#{$poss}//")
+            }
+
+            $or-selector: $or-selector+$temp-selector;
+        }
+
+        /*  Supra Selector pre format :
+#{$or-selector}*/
+        $s : a;
+        $or-selector : propagate($s, map-keys($ors), $ors, $or-selector, 1, $level, $number-of-possibilities);
+        /*
+        keys : #{map-keys($ors)}
+        key : #{$s}
+        index : #{index(map-keys($ors), $s)}
+        map-get : #{map-get($ors, a)}
+        nthmap-get : #{nth(map-get($ors, a), 2)}
+        length : #{length(map-keys($ors))}
+        mod : #{pow(2, length(map-keys($ors)) - 1)}
+        */
+
+        /*Supra Selector post format :
+#{$or-selector}*/
     }
 
     @if $or-selector !="" {
@@ -67,8 +103,7 @@
         $supra-selector: $or-selector;
     }
 
-    /*Supra Selector post format :
-#{$supra-selector}*/
+
     $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container level-#{$level}>.victory-level-#{$level}");
     $supra-selector-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level}");
     $supra-selector-next-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level + 1}");
@@ -85,5 +120,6 @@
     #{$supra-selector-victory} {
         background-color: green;
     }
+
 
 }

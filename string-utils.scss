@@ -13,3 +13,27 @@
 
     @return $string;
 }
+
+@function propagate($key, $keys, $map, $selector, $divisor, $level, $probalities) {
+    @if (index($keys, $key) !=length($map)) {
+
+        $selector: propagate(nth($keys, index($keys, $key)+1), $keys, $map, $selector, $divisor * 2, $level, $probalities);
+    }
+
+    $mod : pow(2, length($keys) - 1) / $divisor;
+    $ref-counter : 1;
+
+    @while $ref-counter<=$probalities {
+        @each $cb-num in map-get($map, $key) {
+            @if $cb-num {
+                @for $time from 1 through $mod {
+                    $selector : str-replace($selector, "//#{$key}#{$ref-counter}//", ".checkbox-#{$cb-num}-level-#{$level}:checked ~ ");
+                    $ref-counter: $ref-counter + 1;
+                }
+            }
+        }
+    }
+
+
+    @return $selector;
+}

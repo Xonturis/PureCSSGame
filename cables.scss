@@ -88,21 +88,33 @@
             }
 
             $supra-selector : $supra-selector+$selector;
-
             $or-selector: "";
 
-            @each $pair,
-            $list-of-or in $ors {
+            @if index(map-keys($ors), a) !=null {
+                $supra-selector: $supra-selector+", ";
+                $or-selector: "";
+                $number-of-possibilities: length(map-get($ors, a)) - 1;
 
-                @each $or in $list-of-or {
-                    @if $or {
-                        $or-selector : $or-selector+str-replace($supra-selector, "//#{$pair}//", ".checkbox-#{$or}-level-#{$level}:checked ~ ")+", ";
-
+                @each $pair,
+                $list in $ors {
+                    @if $pair !=a {
+                        $number-of-possibilities: $number-of-possibilities * (length($list) - 1);
                     }
                 }
-            }
 
-            @if $or-selector !="" {
+                @for $poss from 1 through $number-of-possibilities {
+                    $temp-selector: $supra-selector;
+
+                    @each $val in map-keys($ors) {
+                        $temp-selector : str-replace($temp-selector, "//#{$val}//", "//#{$val}#{$poss}//")
+                    }
+
+                    $or-selector: $or-selector+$temp-selector;
+                }
+
+                $s : a;
+                $or-selector : propagate($s, map-keys($ors), $ors, $or-selector, 1, $level, $number-of-possibilities);
+
                 $or-selector: str-slice($or-selector, 1, length($or-selector) - 4);
 
                 #{$or-selector} {
@@ -110,9 +122,7 @@
                 }
             }
 
-            @if ($supra-selector !=""and $or-selector=="") {
-                //$supra-selector : "#{$supra-selector}#{$selector}";
-
+            @else {
                 #{$supra-selector} {
                     background-color: green;
                 }

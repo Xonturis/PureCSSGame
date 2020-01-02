@@ -250,8 +250,8 @@ container level-1 > .cable-1-layer-1-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-1-level-1:checked ~ container level-1 > .cable-1-layer-1-level-1 {
@@ -268,8 +268,8 @@ container level-1 > .cable-2-layer-1-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-2-level-1:checked ~ container level-1 > .cable-2-layer-1-level-1 {
@@ -286,8 +286,8 @@ container level-1 > .cable-3-layer-1-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-3-level-1:checked ~ container level-1 > .cable-3-layer-1-level-1 {
@@ -304,8 +304,8 @@ container level-1 > .cable-4-layer-1-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-4-level-1:checked ~ container level-1 > .cable-4-layer-1-level-1 {
@@ -322,8 +322,8 @@ container level-1 > .cable-1-layer-2-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
 }
 
 .checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ container level-1 > .cable-1-layer-2-level-1 {
@@ -340,8 +340,8 @@ container level-1 > .cable-2-layer-2-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
-          transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
 }
 
 .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container level-1 > .cable-2-layer-2-level-1 {
@@ -358,9 +358,9 @@ container level-1 > .cable-1-layer-3-level-1 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  height: 70.71068px;
-  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
-          transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+  height: 71.41778px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
 }
 
 .checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container level-1 > .cable-1-layer-3-level-1 {
@@ -381,8 +381,8 @@ Layers : 0, 0, 0
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 100px));
-          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 100px));
+  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 101px));
+          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 101px));
 }
 
 .gate-2-layer-1-level-1 {
@@ -395,8 +395,8 @@ Layers : 0, 0, 0
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 100px));
-          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 100px));
+  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 101px));
+          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 101px));
 }
 
 .gate-1-layer-2-level-1 {
@@ -409,8 +409,8 @@ Layers : 0, 0, 0
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 200px));
-          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 200px));
+  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 202px));
+          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 202px));
 }
 
 .victory-level-1 {
@@ -422,10 +422,6 @@ Layers : 0, 0, 0
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-/*Supra Selector pre format :
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ //SELECTOR//*/
-/*Supra Selector post format :
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ //SELECTOR//*/
 .checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container wrapper-level-1 {
   -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
           animation: 2s ease-in-out 1 disappear forwards !important;
@@ -565,8 +561,8 @@ container level-2 > .cable-1-layer-1-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-1-level-2:checked ~ container level-2 > .cable-1-layer-1-level-2 {
@@ -583,8 +579,8 @@ container level-2 > .cable-2-layer-1-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-2-level-2:checked ~ container level-2 > .cable-2-layer-1-level-2 {
@@ -601,8 +597,8 @@ container level-2 > .cable-3-layer-1-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-3-level-2:checked ~ container level-2 > .cable-3-layer-1-level-2 {
@@ -619,8 +615,8 @@ container level-2 > .cable-4-layer-1-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-4-level-2:checked ~ container level-2 > .cable-4-layer-1-level-2 {
@@ -637,8 +633,8 @@ container level-2 > .cable-1-layer-2-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
 }
 
 .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ container level-2 > .cable-1-layer-2-level-2 {
@@ -655,8 +651,8 @@ container level-2 > .cable-2-layer-2-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
-          transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
 }
 
 .checkbox-3-level-2:checked ~ container level-2 > .cable-2-layer-2-level-2, .checkbox-4-level-2:checked ~ container level-2 > .cable-2-layer-2-level-2 {
@@ -673,9 +669,9 @@ container level-2 > .cable-1-layer-3-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  height: 70.71068px;
-  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
-          transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+  height: 71.41778px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
 }
 
 .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container level-2 > .cable-1-layer-3-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container level-2 > .cable-1-layer-3-level-2 {
@@ -691,10 +687,23 @@ container level-2 > .cable-1-layer-3-level-2 {
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-/*Supra Selector pre format :
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a////SELECTOR//*/
+/*  Supra Selector prepre format :
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a////SELECTOR//, */
+/*possibilities :
+        2*/
+/*  Supra Selector pre format :
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a1////SELECTOR//, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a2////SELECTOR//, */
+/*
+        keys : a
+        key : a
+        index : 1
+        map-get : 3, 4
+        nthmap-get : 3
+        length : 1
+        mod : 1
+        */
 /*Supra Selector post format :
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ //SELECTOR//, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ //SELECTOR//*/
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ //SELECTOR//, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ //SELECTOR//, */
 .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container wrapper-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container wrapper-level-2 {
   -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
           animation: 2s ease-in-out 1 disappear forwards !important;
@@ -934,8 +943,8 @@ container level-3 > .cable-1-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(5vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(5vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(5vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(5vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-1-level-3:checked ~ container level-3 > .cable-1-layer-1-level-3 {
@@ -952,8 +961,8 @@ container level-3 > .cable-2-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(15vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(15vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(15vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(15vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-2-level-3:checked ~ container level-3 > .cable-2-layer-1-level-3 {
@@ -970,8 +979,8 @@ container level-3 > .cable-3-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(25vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(25vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(25vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(25vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-3-level-3:checked ~ container level-3 > .cable-3-layer-1-level-3 {
@@ -988,8 +997,8 @@ container level-3 > .cable-4-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(35vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(35vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(35vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(35vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-4-level-3:checked ~ container level-3 > .cable-4-layer-1-level-3 {
@@ -1006,8 +1015,8 @@ container level-3 > .cable-5-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(45vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(45vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(45vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(45vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-5-level-3:checked ~ container level-3 > .cable-5-layer-1-level-3 {
@@ -1024,8 +1033,8 @@ container level-3 > .cable-6-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(55vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(55vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(55vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(55vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-6-level-3:checked ~ container level-3 > .cable-6-layer-1-level-3 {
@@ -1042,8 +1051,8 @@ container level-3 > .cable-7-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(65vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(65vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(65vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(65vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
 .checkbox-7-level-3:checked ~ container level-3 > .cable-7-layer-1-level-3 {
@@ -1060,8 +1069,8 @@ container level-3 > .cable-8-layer-1-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(75vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(75vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(75vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(75vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
 .checkbox-8-level-3:checked ~ container level-3 > .cable-8-layer-1-level-3 {
@@ -1078,8 +1087,8 @@ container level-3 > .cable-1-layer-2-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
-          transform: translateX(10vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
 }
 
 .checkbox-1-level-3:checked ~ container level-3 > .cable-1-layer-2-level-3, .checkbox-2-level-3:checked ~ container level-3 > .cable-1-layer-2-level-3 {
@@ -1096,11 +1105,11 @@ container level-3 > .cable-2-layer-2-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
-          transform: translateX(30vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
 }
 
-.checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-2-layer-2-level-3 {
+.checkbox-3-level-3:checked ~ container level-3 > .cable-2-layer-2-level-3, .checkbox-4-level-3:checked ~ container level-3 > .cable-2-layer-2-level-3 {
   background-color: green;
 }
 
@@ -1114,8 +1123,8 @@ container level-3 > .cable-3-layer-2-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
-          transform: translateX(50vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
 }
 
 .checkbox-5-level-3:checked ~ container level-3 > .cable-3-layer-2-level-3, .checkbox-6-level-3:checked ~ container level-3 > .cable-3-layer-2-level-3 {
@@ -1132,8 +1141,8 @@ container level-3 > .cable-4-layer-2-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
-          transform: translateX(70vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
 }
 
 .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .cable-4-layer-2-level-3 {
@@ -1150,11 +1159,11 @@ container level-3 > .cable-1-layer-3-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 212.13203px - 100px)) rotate(45deg);
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 212.13203px - 100px)) rotate(45deg);
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(45deg);
 }
 
-.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3 {
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3 {
   background-color: green;
 }
 
@@ -1168,8 +1177,8 @@ container level-3 > .cable-2-layer-3-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 212.13203px - 100px)) rotate(-45deg);
-          transform: translateX(60vw) translateY(calc(80vh - 80px - 212.13203px - 100px)) rotate(-45deg);
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(-45deg);
 }
 
 .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .cable-2-layer-3-level-3, .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .cable-2-layer-3-level-3 {
@@ -1186,9 +1195,9 @@ container level-3 > .cable-1-layer-4-level-3 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  height: 70.71068px;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 282.84271px - 150px));
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 282.84271px - 150px));
+  height: 71.41778px;
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 285.67114px - 150px));
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 285.67114px - 150px));
 }
 
 .checkbox-1-level-3:checked ~ container level-3 > .cable-1-layer-4-level-3 {
@@ -1204,22 +1213,35 @@ container level-3 > .cable-1-layer-4-level-3 {
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-/*Supra Selector pre format :
-//b//.checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ //a//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//*/
+/*  Supra Selector prepre format :
+//a////b////c//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, */
+/*possibilities :
+        8*/
+/*  Supra Selector pre format :
+//a1////b1////c1//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a2////b2////c2//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a3////b3////c3//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a4////b4////c4//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a5////b5////c5//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a6////b6////c6//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a7////b7////c7//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a8////b8////c8//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, */
+/*
+        keys : a, b, c
+        key : a
+        index : 1
+        map-get : 1, 2
+        nthmap-get : 1
+        length : 3
+        mod : 4
+        */
 /*Supra Selector post format :
-.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ //a//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ //a//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //b//.checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //b//.checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//*/
-.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ {
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, */
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3 {
   -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
           animation: 2s ease-in-out 1 disappear forwards !important;
 }
 
-.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ {
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4 {
   display: inline;
   -webkit-animation: 2s ease-in-out 1s 1 appear forwards;
           animation: 2s ease-in-out 1s 1 appear forwards;
 }
 
-.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-4-level-3:checked ~ {
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3 {
   background-color: green;
 }
 /*# sourceMappingURL=new_style.css.map */
