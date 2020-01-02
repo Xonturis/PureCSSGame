@@ -12,7 +12,7 @@
     }
 
     @for $cable from 1 through $number-of-cables {
-        $selector : ".cable-#{$cable}-layer-#{$layerno}-level-#{$level}";
+        $selector : "container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level}";
 
         #{$selector} {
             position: absolute;
@@ -42,7 +42,7 @@
         }
 
         @if ($layerno==1) {
-            .checkbox-#{$cable}-level-#{$level}:checked~container>level-#{$level}>#{$selector} {
+            .checkbox-#{$cable}-level-#{$level}:checked~container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level} {
                 background-color: $cable-color-on;
             }
         }
@@ -67,28 +67,65 @@
                 @else if($value !=2) {
 
                     // OR
-                    /*
-                    #{$requirementno}
-                    */
-                    $ors: append($ors, $requirementno, comma);
 
-                    @for $orno from $requirementno+1 through $number-of-inputs {
+                    @for $orno from $requirementno through $number-of-inputs {
                         @if ($orno <=$number-of-inputs) {
-                            @if (nth($cable-schema, $orno)==$value && index($ors, $value)==null) {
-                                $ors: append($ors, $orno, comma);
+                            @if nth($cable-schema, $orno)==$value {
+                                $list-of-ors: map-get($ors, $value);
+
+                                @if not index($list-of-ors, $orno) {
+                                    @if not $list-of-ors {
+                                        $supra-selector: $supra-selector+"//#{$value}//";
+                                    }
+
+                                    $list-of-ors: append($list-of-ors, $orno, comma);
+                                    $ors: map-merge($ors, ($value : $list-of-ors));
+                                }
                             }
                         }
                     }
                 }
             }
 
-            /*
-            #{$ors}
-            */
-            $supra-selector : "#{$supra-selector}container>level-#{$level}>#{$selector}";
+            $supra-selector : $supra-selector+$selector;
+            $or-selector: "";
 
-            #{$supra-selector} {
-                background-color: green;
+            @if index(map-keys($ors), a) !=null {
+                $supra-selector: $supra-selector+", ";
+                $or-selector: "";
+                $number-of-possibilities: length(map-get($ors, a)) - 1;
+
+                @each $pair,
+                $list in $ors {
+                    @if $pair !=a {
+                        $number-of-possibilities: $number-of-possibilities * (length($list) - 1);
+                    }
+                }
+
+                @for $poss from 1 through $number-of-possibilities {
+                    $temp-selector: $supra-selector;
+
+                    @each $val in map-keys($ors) {
+                        $temp-selector : str-replace($temp-selector, "//#{$val}//", "//#{$val}#{$poss}//")
+                    }
+
+                    $or-selector: $or-selector+$temp-selector;
+                }
+
+                $s : a;
+                $or-selector : propagate($s, map-keys($ors), $ors, $or-selector, 1, $level, $number-of-possibilities);
+
+                $or-selector: str-slice($or-selector, 1, length($or-selector) - 4);
+
+                #{$or-selector} {
+                    background-color: green;
+                }
+            }
+
+            @else {
+                #{$supra-selector} {
+                    background-color: green;
+                }
             }
         }
     }

@@ -2,9 +2,8 @@
     "version": 3,
     "mappings": "",
     "sources": [
-        "victory.scss",
-        "string-utils.scss"
+        "levels.scss"
     ],
     "names": [],
-    "file": "victory.css"
+    "file": "levels.css"
 }

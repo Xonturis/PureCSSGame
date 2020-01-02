@@ -1,18 +1,24 @@
+@charset "UTF-8";
 @-webkit-keyframes blink {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
-
 @keyframes blink {
-  from {
+  0% {
     opacity: 1;
   }
-  to {
+  50% {
     opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }
 
@@ -46,38 +52,46 @@
   }
 }
 
-@-webkit-keyframes victory {
-  from {
+@-webkit-keyframes disappear {
+  0% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  to {
-    opacity: 0;
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 
-@keyframes victory {
-  from {
+@keyframes disappear {
+  0% {
     opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
   }
-  to {
-    opacity: 0;
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(-1000px);
+            transform: translateY(-1000px);
   }
 }
 
 @-webkit-keyframes appear {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
 
 @keyframes appear {
-  from {
+  0% {
     opacity: 0;
   }
-  to {
+  100% {
     opacity: 1;
   }
 }
@@ -108,6 +122,19 @@ container {
           box-shadow: 0px 0px 20px 14px;
 }
 
+/* —————————————————————————————————— LEVEL 1 —————————————————————————————————— */
+wrapper-level-1 {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  min-height: 80vh;
+  min-width: 80vw;
+  background-image: url("./fg2.jpg");
+  background-size: 100%;
+  -webkit-box-shadow: 0px 0px 20px 14px;
+          box-shadow: 0px 0px 20px 14px;
+}
+
 .diode-1-level-1 {
   display: inline-block;
   position: absolute;
@@ -121,13 +148,13 @@ container {
   height: 40px;
 }
 
-.checkbox-1-level-1 ~ container > level-1 > .diode-1-level-1 {
+.checkbox-1-level-1 ~ container level-1 > .diode-1-level-1 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-1-level-1:checked ~ container > level-1 > .diode-1-level-1 {
+.checkbox-1-level-1:checked ~ container level-1 > .diode-1-level-1 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -146,13 +173,13 @@ container {
   height: 40px;
 }
 
-.checkbox-2-level-1 ~ container > level-1 > .diode-2-level-1 {
+.checkbox-2-level-1 ~ container level-1 > .diode-2-level-1 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-2-level-1:checked ~ container > level-1 > .diode-2-level-1 {
+.checkbox-2-level-1:checked ~ container level-1 > .diode-2-level-1 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -171,13 +198,13 @@ container {
   height: 40px;
 }
 
-.checkbox-3-level-1 ~ container > level-1 > .diode-3-level-1 {
+.checkbox-3-level-1 ~ container level-1 > .diode-3-level-1 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-3-level-1:checked ~ container > level-1 > .diode-3-level-1 {
+.checkbox-3-level-1:checked ~ container level-1 > .diode-3-level-1 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -196,13 +223,13 @@ container {
   height: 40px;
 }
 
-.checkbox-4-level-1 ~ container > level-1 > .diode-4-level-1 {
+.checkbox-4-level-1 ~ container level-1 > .diode-4-level-1 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-4-level-1:checked ~ container > level-1 > .diode-4-level-1 {
+.checkbox-4-level-1:checked ~ container level-1 > .diode-4-level-1 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -213,7 +240,7 @@ container {
      * 1 = droite
      * 2 = gauche
 */
-.cable-1-layer-1-level-1 {
+container level-1 > .cable-1-layer-1-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -223,15 +250,15 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
-.checkbox-1-level-1:checked ~ container > level-1 > .cable-1-layer-1-level-1 {
+.checkbox-1-level-1:checked ~ container level-1 > .cable-1-layer-1-level-1 {
   background-color: green;
 }
 
-.cable-2-layer-1-level-1 {
+container level-1 > .cable-2-layer-1-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -241,15 +268,15 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
-.checkbox-2-level-1:checked ~ container > level-1 > .cable-2-layer-1-level-1 {
+.checkbox-2-level-1:checked ~ container level-1 > .cable-2-layer-1-level-1 {
   background-color: green;
 }
 
-.cable-3-layer-1-level-1 {
+container level-1 > .cable-3-layer-1-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -259,15 +286,15 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
-.checkbox-3-level-1:checked ~ container > level-1 > .cable-3-layer-1-level-1 {
+.checkbox-3-level-1:checked ~ container level-1 > .cable-3-layer-1-level-1 {
   background-color: green;
 }
 
-.cable-4-layer-1-level-1 {
+container level-1 > .cable-4-layer-1-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -277,15 +304,15 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
-.checkbox-4-level-1:checked ~ container > level-1 > .cable-4-layer-1-level-1 {
+.checkbox-4-level-1:checked ~ container level-1 > .cable-4-layer-1-level-1 {
   background-color: green;
 }
 
-.cable-1-layer-2-level-1 {
+container level-1 > .cable-1-layer-2-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -295,18 +322,15 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
 }
 
-/*
-            
-            */
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ container > level-1 > .cable-1-layer-2-level-1 {
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ container level-1 > .cable-1-layer-2-level-1 {
   background-color: green;
 }
 
-.cable-2-layer-2-level-1 {
+container level-1 > .cable-2-layer-2-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -316,18 +340,15 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
-          transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
 }
 
-/*
-            
-            */
-.checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 > .cable-2-layer-2-level-1 {
+.checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container level-1 > .cable-2-layer-2-level-1 {
   background-color: green;
 }
 
-.cable-1-layer-3-level-1 {
+container level-1 > .cable-1-layer-3-level-1 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -337,15 +358,12 @@ container {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  height: 70.71068px;
-  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
-          transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+  height: 71.41778px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
 }
 
-/*
-            
-            */
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 > .cable-1-layer-3-level-1 {
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container level-1 > .cable-1-layer-3-level-1 {
   background-color: green;
 }
 
@@ -363,8 +381,8 @@ Layers : 0, 0, 0
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 100px));
-          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 100px));
+  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 101px));
+          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 101px));
 }
 
 .gate-2-layer-1-level-1 {
@@ -377,8 +395,8 @@ Layers : 0, 0, 0
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 100px));
-          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 100px));
+  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 101px));
+          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 101px));
 }
 
 .gate-1-layer-2-level-1 {
@@ -391,8 +409,8 @@ Layers : 0, 0, 0
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 200px));
-          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 200px));
+  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 202px));
+          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 202px));
 }
 
 .victory-level-1 {
@@ -404,19 +422,33 @@ Layers : 0, 0, 0
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 {
-  -webkit-animation: 2s ease-in-out 3s 1 victory forwards;
-          animation: 2s ease-in-out 3s 1 victory forwards;
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container wrapper-level-1 {
+  -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
+          animation: 2s ease-in-out 1 disappear forwards !important;
 }
 
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-2 {
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container wrapper-level-2 {
   display: inline;
-  -webkit-animation: 2s ease-in-out 3s 1 appear forwards;
-          animation: 2s ease-in-out 3s 1 appear forwards;
+  -webkit-animation: 2s ease-in-out 1s 1 appear forwards;
+          animation: 2s ease-in-out 1s 1 appear forwards;
 }
 
-.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container > level-1 > .victory-level-1 {
+.checkbox-1-level-1:checked ~ .checkbox-2-level-1:checked ~ .checkbox-3-level-1:checked ~ .checkbox-4-level-1:checked ~ container level-1 > .victory-level-1 {
   background-color: green;
+}
+
+/* —————————————————————————————————— LEVEL 2 —————————————————————————————————— */
+wrapper-level-2 {
+  position: absolute;
+  z-index: 3;
+  display: none;
+  opacity: 0;
+  min-height: 80vh;
+  min-width: 80vw;
+  background-image: url("./fg2.jpg");
+  background-size: 100%;
+  -webkit-box-shadow: 0px 0px 20px 14px;
+          box-shadow: 0px 0px 20px 14px;
 }
 
 .diode-1-level-2 {
@@ -428,17 +460,17 @@ Layers : 0, 0, 0
           transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
   margin: 0;
   padding: 0;
-  width: 16vw;
+  width: 20vw;
   height: 40px;
 }
 
-.checkbox-1-level-2 ~ container > level-2 > .diode-1-level-2 {
+.checkbox-1-level-2 ~ container level-2 > .diode-1-level-2 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-1-level-2:checked ~ container > level-2 > .diode-1-level-2 {
+.checkbox-1-level-2:checked ~ container level-2 > .diode-1-level-2 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -449,21 +481,21 @@ Layers : 0, 0, 0
   position: absolute;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(16vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(16vw);
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
   margin: 0;
   padding: 0;
-  width: 16vw;
+  width: 20vw;
   height: 40px;
 }
 
-.checkbox-2-level-2 ~ container > level-2 > .diode-2-level-2 {
+.checkbox-2-level-2 ~ container level-2 > .diode-2-level-2 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-2-level-2:checked ~ container > level-2 > .diode-2-level-2 {
+.checkbox-2-level-2:checked ~ container level-2 > .diode-2-level-2 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -474,21 +506,21 @@ Layers : 0, 0, 0
   position: absolute;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(32vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(32vw);
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
   margin: 0;
   padding: 0;
-  width: 16vw;
+  width: 20vw;
   height: 40px;
 }
 
-.checkbox-3-level-2 ~ container > level-2 > .diode-3-level-2 {
+.checkbox-3-level-2 ~ container level-2 > .diode-3-level-2 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-3-level-2:checked ~ container > level-2 > .diode-3-level-2 {
+.checkbox-3-level-2:checked ~ container level-2 > .diode-3-level-2 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -499,52 +531,27 @@ Layers : 0, 0, 0
   position: absolute;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(48vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(48vw);
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
   margin: 0;
   padding: 0;
-  width: 16vw;
+  width: 20vw;
   height: 40px;
 }
 
-.checkbox-4-level-2 ~ container > level-2 > .diode-4-level-2 {
+.checkbox-4-level-2 ~ container level-2 > .diode-4-level-2 {
   background-image: url("diodeOff.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.checkbox-4-level-2:checked ~ container > level-2 > .diode-4-level-2 {
+.checkbox-4-level-2:checked ~ container level-2 > .diode-4-level-2 {
   background-image: url("diodeOn.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
 
-.diode-5-level-2 {
-  display: inline-block;
-  position: absolute;
-  -webkit-transform-origin: bottom center;
-          transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(64vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(64vw);
-  margin: 0;
-  padding: 0;
-  width: 16vw;
-  height: 40px;
-}
-
-.checkbox-5-level-2 ~ container > level-2 > .diode-5-level-2 {
-  background-image: url("diodeOff.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.checkbox-5-level-2:checked ~ container > level-2 > .diode-5-level-2 {
-  background-image: url("diodeOn.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-}
-
-.cable-1-layer-1-level-2 {
+container level-2 > .cable-1-layer-1-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -554,15 +561,15 @@ Layers : 0, 0, 0
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(10vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
-.checkbox-1-level-2:checked ~ container > level-2 > .cable-1-layer-1-level-2 {
+.checkbox-1-level-2:checked ~ container level-2 > .cable-1-layer-1-level-2 {
   background-color: green;
 }
 
-.cable-2-layer-1-level-2 {
+container level-2 > .cable-2-layer-1-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -572,15 +579,15 @@ Layers : 0, 0, 0
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(30vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
-.checkbox-2-level-2:checked ~ container > level-2 > .cable-2-layer-1-level-2 {
+.checkbox-2-level-2:checked ~ container level-2 > .cable-2-layer-1-level-2 {
   background-color: green;
 }
 
-.cable-3-layer-1-level-2 {
+container level-2 > .cable-3-layer-1-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -590,15 +597,15 @@ Layers : 0, 0, 0
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
-          transform: translateX(50vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
 }
 
-.checkbox-3-level-2:checked ~ container > level-2 > .cable-3-layer-1-level-2 {
+.checkbox-3-level-2:checked ~ container level-2 > .cable-3-layer-1-level-2 {
   background-color: green;
 }
 
-.cable-4-layer-1-level-2 {
+container level-2 > .cable-4-layer-1-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -608,15 +615,15 @@ Layers : 0, 0, 0
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
-          transform: translateX(70vw) translateY(calc(80vh - 80px - 70.71068px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
 }
 
-.checkbox-4-level-2:checked ~ container > level-2 > .cable-4-layer-1-level-2 {
+.checkbox-4-level-2:checked ~ container level-2 > .cable-4-layer-1-level-2 {
   background-color: green;
 }
 
-.cable-1-layer-2-level-2 {
+container level-2 > .cable-1-layer-2-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -626,18 +633,15 @@ Layers : 0, 0, 0
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
 }
 
-/*
-            
-            */
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ container > level-2 > .cable-1-layer-2-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ container level-2 > .cable-1-layer-2-level-2 {
   background-color: green;
 }
 
-.cable-2-layer-2-level-2 {
+container level-2 > .cable-2-layer-2-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -647,24 +651,15 @@ Layers : 0, 0, 0
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
-          transform: translateX(60vw) translateY(calc(80vh - 80px - 141.42136px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
 }
 
-/*
-                    3
-                    */
-/*
-                    4
-                    */
-/*
-            3, 4, 4, 4
-            */
-container > level-2 > .cable-2-layer-2-level-2 {
+.checkbox-3-level-2:checked ~ container level-2 > .cable-2-layer-2-level-2, .checkbox-4-level-2:checked ~ container level-2 > .cable-2-layer-2-level-2 {
   background-color: green;
 }
 
-.cable-1-layer-3-level-2 {
+container level-2 > .cable-1-layer-3-level-2 {
   position: absolute;
   display: inline-block;
   margin: 0;
@@ -674,21 +669,13 @@ container > level-2 > .cable-2-layer-2-level-2 {
   height: 100px;
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
-  height: 70.71068px;
-  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
-          transform: translateX(40vw) translateY(calc(80vh - 80px - 212.13203px - 100px));
+  height: 71.41778px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 214.25335px - 100px));
 }
 
-/*
-            
-            */
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ container > level-2 > .cable-1-layer-3-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container level-2 > .cable-1-layer-3-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container level-2 > .cable-1-layer-3-level-2 {
   background-color: green;
-}
-
-container > level-2 {
-  display: none;
-  opacity: 0;
 }
 
 .victory-level-2 {
@@ -700,18 +687,527 @@ container > level-2 {
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-5-level-2:not(:checked) ~ container > level-2 {
-  -webkit-animation: 2s ease-in-out 3s 1 victory forwards;
-          animation: 2s ease-in-out 3s 1 victory forwards;
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container wrapper-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container wrapper-level-2 {
+  -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
+          animation: 2s ease-in-out 1 disappear forwards !important;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-5-level-2:not(:checked) ~ container > level-3 {
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container wrapper-level-3, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container wrapper-level-3 {
   display: inline;
-  -webkit-animation: 2s ease-in-out 3s 1 appear forwards;
-          animation: 2s ease-in-out 3s 1 appear forwards;
+  -webkit-animation: 2s ease-in-out 1s 1 appear forwards;
+          animation: 2s ease-in-out 1s 1 appear forwards;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-5-level-2:not(:checked) ~ container > level-2 > .victory-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container level-2 > .victory-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container level-2 > .victory-level-2 {
+  background-color: green;
+}
+
+/* —————————————————————————————————— LEVEL 3 —————————————————————————————————— */
+wrapper-level-3 {
+  position: absolute;
+  z-index: 4;
+  display: none;
+  opacity: 0;
+  min-height: 80vh;
+  min-width: 80vw;
+  background-image: url("./fg2.jpg");
+  background-size: 100%;
+  -webkit-box-shadow: 0px 0px 20px 14px;
+          box-shadow: 0px 0px 20px 14px;
+}
+
+.diode-1-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-1-level-3 ~ container level-3 > .diode-1-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-1-level-3:checked ~ container level-3 > .diode-1-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-2-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(10vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(10vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-2-level-3 ~ container level-3 > .diode-2-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-2-level-3:checked ~ container level-3 > .diode-2-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-3-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-3-level-3 ~ container level-3 > .diode-3-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-3-level-3:checked ~ container level-3 > .diode-3-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-4-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(30vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(30vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-4-level-3 ~ container level-3 > .diode-4-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-4-level-3:checked ~ container level-3 > .diode-4-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-5-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-5-level-3 ~ container level-3 > .diode-5-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-5-level-3:checked ~ container level-3 > .diode-5-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-6-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(50vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(50vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-6-level-3 ~ container level-3 > .diode-6-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-6-level-3:checked ~ container level-3 > .diode-6-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-7-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-7-level-3 ~ container level-3 > .diode-7-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-7-level-3:checked ~ container level-3 > .diode-7-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-8-level-3 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(70vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(70vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-8-level-3 ~ container level-3 > .diode-8-level-3 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-8-level-3:checked ~ container level-3 > .diode-8-level-3 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+container level-3 > .cable-1-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(5vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(5vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+}
+
+.checkbox-1-level-3:checked ~ container level-3 > .cable-1-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-2-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(15vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(15vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+}
+
+.checkbox-2-level-3:checked ~ container level-3 > .cable-2-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-3-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(25vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(25vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+}
+
+.checkbox-3-level-3:checked ~ container level-3 > .cable-3-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-4-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(35vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(35vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+}
+
+.checkbox-4-level-3:checked ~ container level-3 > .cable-4-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-5-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(45vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(45vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+}
+
+.checkbox-5-level-3:checked ~ container level-3 > .cable-5-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-6-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(55vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(55vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+}
+
+.checkbox-6-level-3:checked ~ container level-3 > .cable-6-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-7-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(65vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+          transform: translateX(65vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(45deg);
+}
+
+.checkbox-7-level-3:checked ~ container level-3 > .cable-7-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-8-layer-1-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(75vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+          transform: translateX(75vw) translateY(calc(80vh - 80px - 71.41778px - 0px)) rotate(-45deg);
+}
+
+.checkbox-8-level-3:checked ~ container level-3 > .cable-8-layer-1-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-1-layer-2-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+}
+
+.checkbox-1-level-3:checked ~ container level-3 > .cable-1-layer-2-level-3, .checkbox-2-level-3:checked ~ container level-3 > .cable-1-layer-2-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-2-layer-2-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+}
+
+.checkbox-3-level-3:checked ~ container level-3 > .cable-2-layer-2-level-3, .checkbox-4-level-3:checked ~ container level-3 > .cable-2-layer-2-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-3-layer-2-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(45deg);
+}
+
+.checkbox-5-level-3:checked ~ container level-3 > .cable-3-layer-2-level-3, .checkbox-6-level-3:checked ~ container level-3 > .cable-3-layer-2-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-4-layer-2-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 142.83557px - 50px)) rotate(-45deg);
+}
+
+.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .cable-4-layer-2-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-1-layer-3-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(45deg);
+}
+
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ container level-3 > .cable-1-layer-3-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-2-layer-3-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 214.25335px - 100px)) rotate(-45deg);
+}
+
+.checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .cable-2-layer-3-level-3, .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .cable-2-layer-3-level-3 {
+  background-color: green;
+}
+
+container level-3 > .cable-1-layer-4-level-3 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: red;
+  width: 1px;
+  height: 100px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 71.41778px;
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 285.67114px - 150px));
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 285.67114px - 150px));
+}
+
+.checkbox-1-level-3:checked ~ container level-3 > .cable-1-layer-4-level-3 {
+  background-color: green;
+}
+
+.victory-level-3 {
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  background: red;
+  -webkit-transform: translateX(calc(40vw - 50px)) translateY(10px);
+          transform: translateX(calc(40vw - 50px)) translateY(10px);
+}
+
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3 {
+  -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
+          animation: 2s ease-in-out 1 disappear forwards !important;
+}
+
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-4 {
+  display: inline;
+  -webkit-animation: 2s ease-in-out 1s 1 appear forwards;
+          animation: 2s ease-in-out 1s 1 appear forwards;
+}
+
+.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container level-3 > .victory-level-3 {
   background-color: green;
 }
 /*# sourceMappingURL=new_style.css.map */
