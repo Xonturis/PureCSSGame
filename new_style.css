@@ -687,23 +687,6 @@ container level-2 > .cable-1-layer-3-level-2 {
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-/*  Supra Selector prepre format :
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a////SELECTOR//, */
-/*possibilities :
-        2*/
-/*  Supra Selector pre format :
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a1////SELECTOR//, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ //a2////SELECTOR//, */
-/*
-        keys : a
-        key : a
-        index : 1
-        map-get : 3, 4
-        nthmap-get : 3
-        length : 1
-        mod : 1
-        */
-/*Supra Selector post format :
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ //SELECTOR//, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ //SELECTOR//, */
 .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container wrapper-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container wrapper-level-2 {
   -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
           animation: 2s ease-in-out 1 disappear forwards !important;
@@ -1213,23 +1196,6 @@ container level-3 > .cable-1-layer-4-level-3 {
           transform: translateX(calc(40vw - 50px)) translateY(10px);
 }
 
-/*  Supra Selector prepre format :
-//a////b////c//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, */
-/*possibilities :
-        8*/
-/*  Supra Selector pre format :
-//a1////b1////c1//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a2////b2////c2//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a3////b3////c3//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a4////b4////c4//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a5////b5////c5//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a6////b6////c6//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a7////b7////c7//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, //a8////b8////c8//.checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, */
-/*
-        keys : a, b, c
-        key : a
-        index : 1
-        map-get : 1, 2
-        nthmap-get : 1
-        length : 3
-        mod : 4
-        */
-/*Supra Selector post format :
-.checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ //SELECTOR//, */
 .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-1-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-3-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-5-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3, .checkbox-2-level-3:checked ~ .checkbox-4-level-3:checked ~ .checkbox-6-level-3:checked ~ .checkbox-7-level-3:checked ~ .checkbox-8-level-3:checked ~ container wrapper-level-3 {
   -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
           animation: 2s ease-in-out 1 disappear forwards !important;

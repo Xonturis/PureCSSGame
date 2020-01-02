@@ -66,10 +66,10 @@
             }
         }
 
-        /*  Supra Selector prepre format :
-#{$supra-selector}*/
-        /*possibilities :
-        #{$number-of-possibilities}*/
+        //           Supra Selector prepre format :
+        // #{$supra-selector}
+        //         possibilities :
+        //         #{$number-of-possibilities}
         @for $poss from 1 through $number-of-possibilities {
             $temp-selector: $supra-selector;
 
@@ -80,22 +80,22 @@
             $or-selector: $or-selector+$temp-selector;
         }
 
-        /*  Supra Selector pre format :
-#{$or-selector}*/
+        //          Supra Selector pre format :
+        // #{$or-selector}
         $s : a;
         $or-selector : propagate($s, map-keys($ors), $ors, $or-selector, 1, $level, $number-of-possibilities);
-        /*
-        keys : #{map-keys($ors)}
-        key : #{$s}
-        index : #{index(map-keys($ors), $s)}
-        map-get : #{map-get($ors, a)}
-        nthmap-get : #{nth(map-get($ors, a), 2)}
-        length : #{length(map-keys($ors))}
-        mod : #{pow(2, length(map-keys($ors)) - 1)}
-        */
 
-        /*Supra Selector post format :
-#{$or-selector}*/
+        //         keys : #{map-keys($ors)}
+        //         key : #{$s}
+        //         index : #{index(map-keys($ors), $s)}
+        //         map-get : #{map-get($ors, a)}
+        //         nthmap-get : #{nth(map-get($ors, a), 2)}
+        //         length : #{length(map-keys($ors))}
+        //         mod : #{pow(2, length(map-keys($ors)) - 1)}
+
+
+        //         Supra Selector post format :
+        // #{$or-selector}
     }
 
     @if $or-selector !="" {
