@@ -2,19 +2,23 @@
 
 $container-height : 80vh;
 $container-width : 80vw;
+$container-cable : #2c3e50;
+$container-fg : #34495e;
+$container-bg : #3498db;
 
 $diode-height : 40px;
 $diode-margin : 10px;
 $diode-top : $diode-height * 2;
 
-$cable-width : 1px;
+$cable-width : 2px;
 $cable-height : 100px;
 $cable-dimensions : ($cable-width + $cable-height) * cos(45deg);
-$cable-color-off : red;
+$cable-color-off : #2c3e50;
 $cable-color-on : green;
 
 $gate-width : 50px;
 $gate-height : 50px;
+$gate-color-off : #2c3e50;
 
 $victory-width : 100px;
 $victory-height : 50px;

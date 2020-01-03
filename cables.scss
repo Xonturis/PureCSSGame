@@ -44,12 +44,19 @@
         @if ($layerno==1) {
             .checkbox-#{$cable}-level-#{$level}:checked~container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level} {
                 background-color: $cable-color-on;
+                box-shadow: 0px 0px 10px 1px $cable-color-on;
             }
         }
 
         @else {
             $cable-schema: nth($schema, $cable);
             $number-of-inputs: length($cable-schema);
+            /*
+            number-of-inputs : #{$number-of-inputs}
+            cable-schema : #{$cable-schema}
+            schema : #{$schema}
+            cable : #{$cable}
+            */
             $supra-selector: "";
             $ors: ();
 
@@ -91,6 +98,11 @@
             $or-selector: "";
 
             @if index(map-keys($ors), a) !=null {
+                /*
+                #{$ors}
+                #{$supra-selector}
+                #{$number-of-inputs}
+                */
                 $supra-selector: $supra-selector+", ";
                 $or-selector: "";
                 $number-of-possibilities: length(map-get($ors, a)) - 1;
@@ -117,14 +129,21 @@
 
                 $or-selector: str-slice($or-selector, 1, length($or-selector) - 4);
 
+                /*
+                #{$or-selector}
+                #{$schema}
+                */
+
                 #{$or-selector} {
-                    background-color: green;
+                    background-color: $cable-color-on;
+                    box-shadow: 0px 0px 10px 1px $cable-color-on;
                 }
             }
 
             @else {
                 #{$supra-selector} {
-                    background-color: green;
+                    background-color: $cable-color-on;
+                    box-shadow: 0px 0px 10px 1px $cable-color-on;
                 }
             }
         }

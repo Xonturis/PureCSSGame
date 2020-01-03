@@ -7,13 +7,30 @@
 @import "victory";
 @import "levels";
 
+:root {
+    counter-reset: score;
+}
+
+.header {
+    position: relative;
+    transform: translateX(calc(50vw - 100px));
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ecf0f1;
+    width: 200px;
+    margin: 0;
+}
+
 div[class^="victory"] {
     text-align: center;
 }
 
 body {
     margin: 0;
-    background-image: url("./bg2.jpg");
+    //background-image: url("./bg2.jpg");
+    background-color: $container-bg;
     background-size: contain;
 }
 
@@ -27,9 +44,10 @@ container {
     margin: 10vh 10vw 10vh 10vw;
     min-height: $container-height;
     min-width: $container-width;
-    background-image: url("./fg2.jpg");
+    //background-image: url("./fg2.jpg"); 
+    background-color: $container-fg;
     background-size: 100%;
-    box-shadow: 0px 0px 20px 14px;
+    box-shadow: 0px 0px 20px 14px $container-fg;
 }
 
 /* —————————————————————————————————— LEVEL 1 —————————————————————————————————— */
@@ -98,6 +116,10 @@ $layers : ($cables-layer-1, $cables-layer-2, $cables-layer-3);
 $schemas : (null, $cables-layer-2-schema, $cables-layer-3-schema);
 @include setupCableLayers($layers, $schemas, 4, 2);
 
+$gates-layer-1 : (0, 0);
+$gates-layer-2 : 0;
+$gates : ($gates-layer-1, $gates-layer-2);
+@include setupGateLayers($gates, 4, 2);
 
 @include setupVictory((1, 1, a, a), 2);
 
@@ -125,11 +147,17 @@ $cables-layer-3-schema : (a, a, b, b, 2, 2, 2, 2),
 // LAYER 4
 $cables-layer-4 : 3;
 
-$cables-layer-4-schema : (a, a, b, b, c, c, 1, 1);
+$cables-layer-4-schema : (a, a, b, b, c, c, 1, 1),
+(null);
 
 $layers : ($cables-layer-1, $cables-layer-2, $cables-layer-3, $cables-layer-4);
 $schemas : (null, $cables-layer-2-schema, $cables-layer-3-schema, $cables-layer-4-schema);
 @include setupCableLayers($layers, $schemas, 8, 3);
 
+$gates-layer-1 : (0, 0, 0, 0);
+$gates-layer-2 : (0, 0);
+$gates-layer-3 : 0;
+$gates : ($gates-layer-1, $gates-layer-2, $gates-layer-3);
+@include setupGateLayers($gates, 8, 3);
 
 @include setupVictory((a, a, b, b, c, c, 1, 1), 3);

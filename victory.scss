@@ -107,6 +107,9 @@
     $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container level-#{$level}>.victory-level-#{$level}");
     $supra-selector-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level}");
     $supra-selector-next-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level + 1}");
+    $supra-selector-header : str-slice($supra-selector, 1, length($supra-selector) - 17);
+
+    /*#{$supra-selector-header}*/
 
     #{$supra-selector-level} {
         animation: 2s ease-in-out 1 disappear forwards !important;
@@ -121,5 +124,8 @@
         background-color: green;
     }
 
+    #{$supra-selector-header} {
+        counter-increment: score;
+    }
 
 }
