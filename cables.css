@@ -1,1 +1,17 @@
-/* No CSS *//*# sourceMappingURL=cables.css.map */
+@-webkit-keyframes blob {
+  from {
+    border-radius: 15px;
+  }
+  to {
+    border-radius: 25px;
+  }
+}
+@keyframes blob {
+  from {
+    border-radius: 15px;
+  }
+  to {
+    border-radius: 25px;
+  }
+}
+/*# sourceMappingURL=cables.css.map */

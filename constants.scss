@@ -1,5 +1,7 @@
 @import "trigo";
 
+$number-of-levels : 3;
+
 $container-height : 80vh;
 $container-width : 80vw;
 $container-cable : #2c3e50;
@@ -10,16 +12,21 @@ $diode-height : 40px;
 $diode-margin : 10px;
 $diode-top : $diode-height * 2;
 
-$cable-width : 2px;
-$cable-height : 100px;
+$cable-width : 2px; // 2px
+$cable-height : 100px; // 200px
 $cable-dimensions : ($cable-width + $cable-height) * cos(45deg);
 $cable-color-off : #2c3e50;
 $cable-color-on : green;
 
-$gate-width : 50px;
-$gate-height : 50px;
+$gate-width : 50px; // 50px
+$gate-height : 50px; // 50px
 $gate-color-off : #2c3e50;
 
 $victory-width : 100px;
 $victory-height : 50px;
 $victory-margin : 10px;
+
+$popup-height : 200px;
+$popup-width : 800px;
+$popup-color : #7f8c8d;
+$popup-hover-color : #95a5a6;

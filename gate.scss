@@ -20,9 +20,11 @@
                 width: $gate-width;
                 height: $gate-height;
                 transform-origin: top center;
-                $tx: calc(#{($positionner * $gateno - $positionner / 2) * 2} - #{($gate-width / 2)});
-                $ty : calc(#{$container-height} - #{$diode-top} - #{(( $cable-dimensions * cos(45deg) ) * ( 2 * $layerno))});
+                $tx : calc(#{($positionner * $gateno - $positionner / 2) * 2} - #{($gate-width / 2)});
+                $ty : calc(#{$container-height} - #{$diode-top} - #{($cable-dimensions + $gate-height) * $layerno - $gate-height / 2});
+                //calc(#{$container-height} - #{$diode-top} - #{(( $cable-dimensions * cos(45deg) ) * ( 2 * $layerno))});
                 transform: translateX($tx) translateY($ty);
+                border-radius: 15px;
             }
         }
     }
@@ -31,10 +33,9 @@
 @mixin setupGateLayers($gate-layers, $number-of-inputs, $level) {
     $number-of-layers: length($gate-layers);
 
-    /*
-Number of layers : #{$number-of-layers}
-Layers : #{$gates}
-*/
+    // Number of layers : #{$number-of-layers}
+    // Layers : #{$gates}
+
     @for $gateno from 1 through $number-of-layers {
         @include setupGateLayer(nth($gates, $gateno), $number-of-inputs, $gateno, $level);
     }

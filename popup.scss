@@ -1,0 +1,88 @@
+@mixin setupPopup($selector, $level) {
+
+    $supra-selector-level : str-replace($selector, "//SELECTOR//", ".checkbox-confirm-level-#{$level}:checked ~ container wrapper-level-#{$level}");
+    $supra-selector-next-level : str-replace($selector, "//SELECTOR//", ".checkbox-confirm-level-#{$level}:checked ~ container wrapper-level-#{$level + 1}");
+    $supra-selector-popup-checkbox : str-replace($selector, "//SELECTOR//", ".checkbox-confirm-level-#{$level}:checked");
+    $supra-selector-popup : str-replace($selector, "//SELECTOR//", "container wrapper-level-#{$level} popup-level-#{$level}");
+
+    popup-level-#{$level} {
+        display: none;
+
+        text-align: center;
+
+        box-shadow: 0px 0px 10px 1px $cable-color-off;
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+
+            &::after {
+                @if $level==$number-of-levels {
+                    content: " jeu !";
+                }
+
+                @else {
+                    content: "niveau #{$level} !";
+                }
+            }
+        }
+
+        label {
+            border: $popup-color;
+            border-radius: 15px;
+            background-color: $popup-color;
+            color: white;
+            position: relative;
+
+            bottom: -50px;
+
+            padding: 5px 20px 5px 20px;
+
+
+
+            &:hover {
+                color: white;
+                background-color: $cable-color-on;
+                box-shadow: 0px 0px 10px 1px $cable-color-on;
+                font-weight: bold;
+                transition: all 0.5s;
+            }
+
+            &::after {
+                @if $level==$number-of-levels {
+                    content: "Terminer le jeu";
+                }
+
+                @else {
+                    content : "Passer au niveau #{$level + 1}";
+                }
+            }
+        }
+    }
+
+    #{$supra-selector-popup} {
+        z-index: 10;
+        display: block;
+        position: absolute;
+        background-color: $cable-color-off;
+        $ty: calc(#{$container-height / 2} - #{$popup-height / 2});
+        $tx: calc(#{$container-width / 2} - #{$popup-width / 2});
+        transform: translateX($tx) translateY($ty);
+        min-width: $popup-width;
+        min-height: $popup-height;
+    }
+
+    #{$supra-selector-popup-checkbox} {
+        counter-increment: score;
+    }
+
+    #{$supra-selector-level} {
+        animation: 2s ease-in-out 1 disappear forwards !important;
+    }
+
+    #{$supra-selector-next-level} {
+        display: inline;
+        animation: 2s ease-in-out 1s 1 appear forwards;
+    }
+}
