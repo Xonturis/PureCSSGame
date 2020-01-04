@@ -126,11 +126,25 @@
 
 @mixin setupVictoryScreen() {
     wrapper-level-#{$number-of-levels + 1} {
+
+        div.mark {
+            min-height: 100px;
+            min-width: $container-width;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+
+            &::after {
+                content: quote("Vous avez activé ") counter(checked) quote(" entrée(s), la nombre minimal était de #{$opti}");
+            }
+        }
+
         div.cup {
             background-image: url("cup.svg");
             background-repeat: no-repeat;
             background-position: center;
-            min-height: $container-height;
+            min-height: calc(#{$container-height} - 100px);
             min-width: $container-width;
 
             input {
@@ -142,8 +156,7 @@
                 background-color: #be8b00;
                 border: none;
                 width: $container-width / 4;
-                transform: translateX(#{$container-width / 2 - $input-width / 2}) translateY(calc(#{$container-height} - 50px));
-
+                transform: translateX(calc(#{$container-width / 2 - $container-width / 8} + 10px)) translateY(calc(#{$container-height} - 150px));
             }
         }
     }

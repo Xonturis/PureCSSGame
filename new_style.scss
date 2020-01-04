@@ -9,6 +9,7 @@
 
 :root {
     counter-reset: score;
+    counter-reset: checked;
 }
 
 .header {
@@ -64,9 +65,12 @@ div[class^="victory"] {
     text-align: center;
 }
 
+input[type="checkbox"]:checked {
+    counter-increment: checked;
+}
+
 body {
     margin: 0;
-    //background-image: url("./bg2.jpg");
     background-color: $container-bg;
     background-size: contain;
 }
