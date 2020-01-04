@@ -210,3 +210,4 @@ $gates : ($gates-layer-1, $gates-layer-2, $gates-layer-3);
 
 /* —————————————————————————————————— VICTORY LEVEL —————————————————————————————————— */
 @include setupLevel(4);
+@include setupVictoryScreen();

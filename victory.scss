@@ -123,3 +123,28 @@
         box-shadow: 0px 0px 10px 1px green;
     }
 }
+
+@mixin setupVictoryScreen() {
+    wrapper-level-#{$number-of-levels + 1} {
+        div.cup {
+            background-image: url("cup.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: $container-height;
+            min-width: $container-width;
+
+            input {
+                position: relative;
+                font-size: xx-large;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #FED944;
+                background-color: #be8b00;
+                border: none;
+                width: $container-width / 4;
+                transform: translateX(#{$container-width / 2 - $input-width / 2}) translateY(calc(#{$container-height} - 50px));
+
+            }
+        }
+    }
+}
