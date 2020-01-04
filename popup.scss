@@ -19,11 +19,11 @@
 
             &::after {
                 @if $level==$number-of-levels {
-                    content: " jeu !";
+                    content: "Félicitations, vous avez terminé le jeu !";
                 }
 
                 @else {
-                    content: "niveau #{$level} !";
+                    content: "Félicitations, vous avez terminé le niveau #{$level} !";
                 }
             }
         }

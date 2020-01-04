@@ -555,7 +555,7 @@ popup-level-1 h1 {
 }
 
 popup-level-1 h1::after {
-  content: "niveau 1 !";
+  content: "Félicitations, vous avez terminé le niveau 1 !";
 }
 
 popup-level-1 label {
@@ -637,7 +637,7 @@ wrapper-level-2 {
           transform: translateY(calc(80vh - 40px - 10px)) translateX(0vw);
   margin: 0;
   padding: 0;
-  width: 20vw;
+  width: 10vw;
   height: 40px;
 }
 
@@ -658,11 +658,11 @@ wrapper-level-2 {
   position: absolute;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(10vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(10vw);
   margin: 0;
   padding: 0;
-  width: 20vw;
+  width: 10vw;
   height: 40px;
 }
 
@@ -683,11 +683,11 @@ wrapper-level-2 {
   position: absolute;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(20vw);
   margin: 0;
   padding: 0;
-  width: 20vw;
+  width: 10vw;
   height: 40px;
 }
 
@@ -708,11 +708,11 @@ wrapper-level-2 {
   position: absolute;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
-  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
-          transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(30vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(30vw);
   margin: 0;
   padding: 0;
-  width: 20vw;
+  width: 10vw;
   height: 40px;
 }
 
@@ -728,6 +728,106 @@ wrapper-level-2 {
   background-position: center;
 }
 
+.diode-5-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(40vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-5-level-2 ~ container level-2 > .diode-5-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-5-level-2:checked ~ container level-2 > .diode-5-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-6-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(50vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(50vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-6-level-2 ~ container level-2 > .diode-6-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-6-level-2:checked ~ container level-2 > .diode-6-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-7-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(60vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-7-level-2 ~ container level-2 > .diode-7-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-7-level-2:checked ~ container level-2 > .diode-7-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.diode-8-level-2 {
+  display: inline-block;
+  position: absolute;
+  -webkit-transform-origin: bottom center;
+          transform-origin: bottom center;
+  -webkit-transform: translateY(calc(80vh - 40px - 10px)) translateX(70vw);
+          transform: translateY(calc(80vh - 40px - 10px)) translateX(70vw);
+  margin: 0;
+  padding: 0;
+  width: 10vw;
+  height: 40px;
+}
+
+.checkbox-8-level-2 ~ container level-2 > .diode-8-level-2 {
+  background-image: url("diodeOff.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.checkbox-8-level-2:checked ~ container level-2 > .diode-8-level-2 {
+  background-image: url("diodeOn.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 container level-2 > .cable-1-layer-1-level-2 {
   position: absolute;
   display: inline-block;
@@ -738,8 +838,8 @@ container level-2 > .cable-1-layer-1-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
-          transform: translateX(10vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(5vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+          transform: translateX(5vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
 }
 
 .checkbox-1-level-2:checked ~ container level-2 > .cable-1-layer-1-level-2 {
@@ -758,8 +858,8 @@ container level-2 > .cable-2-layer-1-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
-          transform: translateX(30vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(15vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+          transform: translateX(15vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
 }
 
 .checkbox-2-level-2:checked ~ container level-2 > .cable-2-layer-1-level-2 {
@@ -778,8 +878,8 @@ container level-2 > .cable-3-layer-1-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
-          transform: translateX(50vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+  -webkit-transform: translateX(25vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+          transform: translateX(25vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
 }
 
 .checkbox-3-level-2:checked ~ container level-2 > .cable-3-layer-1-level-2 {
@@ -798,11 +898,91 @@ container level-2 > .cable-4-layer-1-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
-          transform: translateX(70vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+  -webkit-transform: translateX(35vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+          transform: translateX(35vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
 }
 
 .checkbox-4-level-2:checked ~ container level-2 > .cable-4-layer-1-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+container level-2 > .cable-5-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(45vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+          transform: translateX(45vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+}
+
+.checkbox-5-level-2:checked ~ container level-2 > .cable-5-layer-1-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+container level-2 > .cable-6-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(55vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+          transform: translateX(55vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+}
+
+.checkbox-6-level-2:checked ~ container level-2 > .cable-6-layer-1-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+container level-2 > .cable-7-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(65vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+          transform: translateX(65vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(45deg);
+}
+
+.checkbox-7-level-2:checked ~ container level-2 > .cable-7-layer-1-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+container level-2 > .cable-8-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(75vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+          transform: translateX(75vw) translateY(calc(80vh - 80px - 72.12489px - 0px)) rotate(-45deg);
+}
+
+.checkbox-8-level-2:checked ~ container level-2 > .cable-8-layer-1-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
@@ -818,17 +998,17 @@ container level-2 > .cable-1-layer-2-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(45deg);
-          transform: translateX(20vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(45deg);
+  -webkit-transform: translateX(10vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(45deg);
+          transform: translateX(10vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(45deg);
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ container level-2 > .cable-1-layer-2-level-2 {
+.checkbox-1-level-2:checked ~ container level-2 > .cable-1-layer-2-level-2, .checkbox-2-level-2:checked ~ container level-2 > .cable-1-layer-2-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ container level-2 > .gate-1-layer-1-level-2 {
+.checkbox-1-level-2:checked ~ container level-2 > .gate-1-layer-1-level-2, .checkbox-2-level-2:checked ~ container level-2 > .gate-1-layer-1-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
@@ -847,17 +1027,75 @@ container level-2 > .cable-2-layer-2-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(-45deg);
-          transform: translateX(60vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(-45deg);
+  -webkit-transform: translateX(30vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(-45deg);
+          transform: translateX(30vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(-45deg);
 }
 
-.checkbox-3-level-2:checked ~ container level-2 > .cable-2-layer-2-level-2, .checkbox-4-level-2:checked ~ container level-2 > .cable-2-layer-2-level-2 {
+.checkbox-3-level-2:checked ~ .checkbox-4-level-2:not(:checked) ~ container level-2 > .cable-2-layer-2-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
 }
 
-.checkbox-3-level-2:checked ~ container level-2 > .gate-2-layer-1-level-2, .checkbox-4-level-2:checked ~ container level-2 > .gate-2-layer-1-level-2 {
+.checkbox-3-level-2:checked ~ .checkbox-4-level-2:not(:checked) ~ container level-2 > .gate-2-layer-1-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+  border-radius: 25px;
+  -webkit-animation: 2s ease-in-out infinite alternate blob;
+          animation: 2s ease-in-out infinite alternate blob;
+}
+
+container level-2 > .cable-3-layer-2-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(50vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(45deg);
+          transform: translateX(50vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(45deg);
+}
+
+.checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ container level-2 > .cable-3-layer-2-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+.checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ container level-2 > .gate-3-layer-1-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+  border-radius: 25px;
+  -webkit-animation: 2s ease-in-out infinite alternate blob;
+          animation: 2s ease-in-out infinite alternate blob;
+}
+
+container level-2 > .cable-4-layer-2-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(70vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(-45deg);
+          transform: translateX(70vw) translateY(calc(80vh - 80px - 144.24978px - 50px)) rotate(-45deg);
+}
+
+.checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .cable-4-layer-2-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+.checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .gate-4-layer-1-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
@@ -876,17 +1114,75 @@ container level-2 > .cable-1-layer-3-level-2 {
   -webkit-transform-origin: bottom left;
           transform-origin: bottom left;
   height: 100px;
-  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 216.37468px - 100px));
-          transform: translateX(40vw) translateY(calc(80vh - 80px - 216.37468px - 100px));
+  -webkit-transform: translateX(20vw) translateY(calc(80vh - 80px - 216.37468px - 100px)) rotate(45deg);
+          transform: translateX(20vw) translateY(calc(80vh - 80px - 216.37468px - 100px)) rotate(45deg);
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container level-2 > .cable-1-layer-3-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container level-2 > .cable-1-layer-3-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ container level-2 > .cable-1-layer-3-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ container level-2 > .cable-1-layer-3-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container level-2 > .gate-1-layer-2-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container level-2 > .gate-1-layer-2-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ container level-2 > .gate-1-layer-2-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ container level-2 > .gate-1-layer-2-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+  border-radius: 25px;
+  -webkit-animation: 2s ease-in-out infinite alternate blob;
+          animation: 2s ease-in-out infinite alternate blob;
+}
+
+container level-2 > .cable-2-layer-3-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(60vw) translateY(calc(80vh - 80px - 216.37468px - 100px)) rotate(-45deg);
+          transform: translateX(60vw) translateY(calc(80vh - 80px - 216.37468px - 100px)) rotate(-45deg);
+}
+
+.checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .cable-2-layer-3-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+.checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .gate-2-layer-2-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+  border-radius: 25px;
+  -webkit-animation: 2s ease-in-out infinite alternate blob;
+          animation: 2s ease-in-out infinite alternate blob;
+}
+
+container level-2 > .cable-1-layer-4-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 2px;
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+  height: 100px;
+  -webkit-transform: translateX(40vw) translateY(calc(80vh - 80px - 288.49957px - 150px));
+          transform: translateX(40vw) translateY(calc(80vh - 80px - 288.49957px - 150px));
+}
+
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .cable-1-layer-4-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .cable-1-layer-4-level-2 {
+  background-color: green;
+  -webkit-box-shadow: 0px 0px 10px 1px green;
+          box-shadow: 0px 0px 10px 1px green;
+}
+
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .gate-1-layer-3-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .gate-1-layer-3-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
@@ -905,8 +1201,8 @@ container level-2 > .cable-1-layer-3-level-2 {
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
-          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+  -webkit-transform: translateX(calc(10vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+          transform: translateX(calc(10vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
   border-radius: 15px;
 }
 
@@ -920,8 +1216,38 @@ container level-2 > .cable-1-layer-3-level-2 {
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
-          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+  -webkit-transform: translateX(calc(30vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+          transform: translateX(calc(30vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+  border-radius: 15px;
+}
+
+.gate-3-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(50vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+          transform: translateX(calc(50vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+  border-radius: 15px;
+}
+
+.gate-4-layer-1-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(70vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
+          transform: translateX(calc(70vw - 25px)) translateY(calc(80vh - 80px - 97.12489px));
   border-radius: 15px;
 }
 
@@ -935,8 +1261,38 @@ container level-2 > .cable-1-layer-3-level-2 {
   height: 50px;
   -webkit-transform-origin: top center;
           transform-origin: top center;
-  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 219.24978px));
-          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 219.24978px));
+  -webkit-transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 219.24978px));
+          transform: translateX(calc(20vw - 25px)) translateY(calc(80vh - 80px - 219.24978px));
+  border-radius: 15px;
+}
+
+.gate-2-layer-2-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 219.24978px));
+          transform: translateX(calc(60vw - 25px)) translateY(calc(80vh - 80px - 219.24978px));
+  border-radius: 15px;
+}
+
+.gate-1-layer-3-level-2 {
+  position: absolute;
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  background: #2c3e50;
+  width: 50px;
+  height: 50px;
+  -webkit-transform-origin: top center;
+          transform-origin: top center;
+  -webkit-transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 341.37468px));
+          transform: translateX(calc(40vw - 25px)) translateY(calc(80vh - 80px - 341.37468px));
   border-radius: 15px;
 }
 
@@ -973,7 +1329,7 @@ popup-level-2 h1 {
 }
 
 popup-level-2 h1::after {
-  content: "niveau 2 !";
+  content: "Félicitations, vous avez terminé le niveau 2 !";
 }
 
 popup-level-2 label {
@@ -1000,7 +1356,7 @@ popup-level-2 label::after {
   content: "Passer au niveau 3";
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container wrapper-level-2 popup-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container wrapper-level-2 popup-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container wrapper-level-2 popup-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container wrapper-level-2 popup-level-2 {
   z-index: 10;
   display: block;
   position: absolute;
@@ -1011,22 +1367,22 @@ popup-level-2 label::after {
   min-height: 200px;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-confirm-level-2:checked, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-confirm-level-2:checked {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ .checkbox-confirm-level-2:checked, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ .checkbox-confirm-level-2:checked {
   counter-increment: score;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-2 {
   -webkit-animation: 2s ease-in-out 1 disappear forwards !important;
           animation: 2s ease-in-out 1 disappear forwards !important;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-3, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-3 {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-3, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ .checkbox-confirm-level-2:checked ~ container wrapper-level-3 {
   display: inline;
   -webkit-animation: 2s ease-in-out 1s 1 appear forwards;
           animation: 2s ease-in-out 1s 1 appear forwards;
 }
 
-.checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-3-level-2:checked ~ container level-2 > .victory-level-2, .checkbox-1-level-2:checked ~ .checkbox-2-level-2:checked ~ .checkbox-4-level-2:checked ~ container level-2 > .victory-level-2 {
+.checkbox-1-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .victory-level-2, .checkbox-2-level-2:checked ~ .checkbox-3-level-2:not(:checked) ~ .checkbox-4-level-2:not(:checked) ~ .checkbox-5-level-2:not(:checked) ~ .checkbox-6-level-2:checked ~ .checkbox-7-level-2:checked ~ .checkbox-8-level-2:checked ~ container level-2 > .victory-level-2 {
   background-color: green;
   -webkit-box-shadow: 0px 0px 10px 1px green;
           box-shadow: 0px 0px 10px 1px green;
@@ -1747,7 +2103,7 @@ popup-level-3 h1 {
 }
 
 popup-level-3 h1::after {
-  content: " jeu !";
+  content: "Félicitations, vous avez terminé le jeu !";
 }
 
 popup-level-3 label {
