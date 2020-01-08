@@ -1,4 +1,5 @@
 @import "string-utils";
+@import "popup";
 
 @mixin setupVictory($secret, $level) {
 
@@ -8,8 +9,17 @@
         height: $victory-height;
 
         background: red;
+        box-shadow: 0px 0px 10px 1px red;
 
         transform: translateX(calc(#{$container-width / 2} - #{$victory-width / 2})) translateY($victory-margin);
+
+        span {
+            position: relative;
+            top: calc(#{$victory-height} / 2 - 0.5em);
+            font-family: Arial, Helvetica, sans-serif;
+            color: #ecf0f1;
+            font-weight: bold;
+        }
     }
 
     $number-of-inputs: length($secret);
@@ -105,21 +115,49 @@
 
 
     $supra-selector-victory : str-replace($supra-selector, "//SELECTOR//", "container level-#{$level}>.victory-level-#{$level}");
-    $supra-selector-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level}");
-    $supra-selector-next-level : str-replace($supra-selector, "//SELECTOR//", "container wrapper-level-#{$level + 1}");
 
-    #{$supra-selector-level} {
-        animation: 2s ease-in-out 1 disappear forwards !important;
-    }
-
-    #{$supra-selector-next-level} {
-        display: inline;
-        animation: 2s ease-in-out 1s 1 appear forwards;
-    }
+    @include setupPopup($supra-selector, $level);
 
     #{$supra-selector-victory} {
         background-color: green;
+        box-shadow: 0px 0px 10px 1px green;
     }
+}
 
+@mixin setupVictoryScreen() {
+    wrapper-level-#{$number-of-levels + 1} {
 
+        div.mark {
+            min-height: 100px;
+            min-width: $container-width;
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: center;
+            font-size: xx-large;
+
+            &::after {
+                content: quote("Vous avez activé ") counter(checked) quote(" entrée(s), la nombre minimal était de #{$opti}");
+            }
+        }
+
+        div.cup {
+            background-image: url("cup.svg");
+            background-repeat: no-repeat;
+            background-position: center;
+            min-height: calc(#{$container-height} - 100px);
+            min-width: $container-width;
+
+            input {
+                position: relative;
+                font-size: xx-large;
+                text-align: center;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #FED944;
+                background-color: #be8b00;
+                border: none;
+                width: $container-width / 4;
+                transform: translateX(calc(#{$container-width / 2 - $container-width / 8} + 10px)) translateY(calc(#{$container-height} - 150px));
+            }
+        }
+    }
 }

@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAmLA,UAAU,CAAV,IAAU;EACN,EAAE;IACE,aAAa,EAAE,IAAI;;EAGvB,GAAG;IACC,aAAa,EAAE,IAAI;;EAGvB,IAAI;IACA,aAAa,EAAE,IAAI",
     "sources": [
         "cables.scss",
         "trigo.scss"

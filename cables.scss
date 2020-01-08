@@ -13,6 +13,7 @@
 
     @for $cable from 1 through $number-of-cables {
         $selector : "container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level}";
+        $gate-selector: "container level-#{$level}>.gate-#{$cable}-layer-#{$layerno - 1}-level-#{$level}";
 
         #{$selector} {
             position: absolute;
@@ -21,35 +22,43 @@
             padding: 0;
             background: $cable-color-off;
             width: $cable-width;
-            height: $cable-height;
 
             transform-origin: bottom left;
             $tx: $positionner * $cable - $positionner / 2;
             $ty : calc(#{$container-height} - #{$diode-top} - #{($cable-dimensions * ($layerno))} - #{$gate-height * $gate-layers});
 
             @if (nth($layer, $cable)==1) {
+                height: $cable-height;
                 transform: translateX($tx) translateY($ty) rotate(45deg);
             }
 
             @else if (nth($layer, $cable)==2) {
+                height: $cable-height;
                 transform: translateX($tx) translateY($ty) rotate(-45deg);
             }
 
             @else {
-                height: $cable-dimensions;
-                transform: translateX($tx) translateY($ty)
+                height: $cable-height;
+                transform: translateX($container-width / 2) translateY($ty);
             }
         }
 
         @if ($layerno==1) {
             .checkbox-#{$cable}-level-#{$level}:checked~container level-#{$level}>.cable-#{$cable}-layer-#{$layerno}-level-#{$level} {
                 background-color: $cable-color-on;
+                box-shadow: 0px 0px 10px 1px $cable-color-on;
             }
         }
 
         @else {
             $cable-schema: nth($schema, $cable);
             $number-of-inputs: length($cable-schema);
+
+            // number-of-inputs : #{$number-of-inputs}
+            // cable-schema : #{$cable-schema}
+            // schema : #{$schema}
+            // cable : #{$cable}
+
             $supra-selector: "";
             $ors: ();
 
@@ -87,10 +96,15 @@
                 }
             }
 
-            $supra-selector : $supra-selector+$selector;
+            $supra-selector : $supra-selector+"//SELECTOR//";
             $or-selector: "";
 
             @if index(map-keys($ors), a) !=null {
+
+                // #{$ors}
+                // #{$supra-selector}
+                // #{$number-of-inputs}
+
                 $supra-selector: $supra-selector+", ";
                 $or-selector: "";
                 $number-of-possibilities: length(map-get($ors, a)) - 1;
@@ -117,14 +131,38 @@
 
                 $or-selector: str-slice($or-selector, 1, length($or-selector) - 4);
 
+                // #{$or-selector}
+                // #{$schema}
+                $gate-selector : str-replace($or-selector, "//SELECTOR//", $gate-selector);
+                $or-selector : str-replace($or-selector, "//SELECTOR//", $selector);
+
                 #{$or-selector} {
-                    background-color: green;
+                    background-color: $cable-color-on;
+                    box-shadow: 0px 0px 10px 1px $cable-color-on;
+                }
+
+                #{$gate-selector} {
+                    background-color: $cable-color-on;
+                    box-shadow: 0px 0px 10px 1px $cable-color-on;
+                    border-radius: 25px;
+                    animation: 2s ease-in-out infinite alternate blob;
                 }
             }
 
             @else {
+                $gate-selector: str-replace($supra-selector, "//SELECTOR//", $gate-selector);
+                $supra-selector: str-replace($supra-selector, "//SELECTOR//", $selector);
+
                 #{$supra-selector} {
-                    background-color: green;
+                    background-color: $cable-color-on;
+                    box-shadow: 0px 0px 10px 1px $cable-color-on;
+                }
+
+                #{$gate-selector} {
+                    background-color: $cable-color-on;
+                    box-shadow: 0px 0px 10px 1px $cable-color-on;
+                    border-radius: 25px;
+                    animation: 2s ease-in-out infinite alternate blob;
                 }
             }
         }
@@ -136,5 +174,19 @@
 
     @for $layer from 1 through $number-of-layers {
         @include setupCableLayer(nth($layers, $layer), $layer, $level, $number-of-inputs, nth($schemas, $layer));
+    }
+}
+
+@keyframes blob {
+    0% {
+        border-radius: 15px;
+    }
+
+    80% {
+        border-radius: 25px;
+    }
+
+    100% {
+        border-radius: 20px;
     }
 }

@@ -7,13 +7,71 @@
 @import "victory";
 @import "levels";
 
+:root {
+    counter-reset: score;
+    counter-reset: checked;
+}
+
+.header {
+    position: relative;
+    transform: translateX(calc(50vw - 100px));
+    text-align: center;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ecf0f1;
+    width: 200px;
+    margin: 0;
+}
+
+.header::after {
+    content: counter(score);
+}
+
+div {
+    &.and {
+        color: $popup-hover-color;
+        text-align: center;
+
+        &::after {
+            font-size: $gate-height;
+            content: "∧";
+        }
+    }
+
+    &.myst {
+        color: $popup-hover-color;
+        text-align: center;
+
+        &::after {
+            font-size: $gate-height;
+            content: "?";
+        }
+    }
+
+    &.or {
+        color: $popup-hover-color;
+        text-align: center;
+
+        &::after {
+            font-size: $gate-height;
+            content: "∨";
+        }
+    }
+}
+
+
 div[class^="victory"] {
     text-align: center;
 }
 
+input[type="checkbox"]:checked {
+    counter-increment: checked;
+}
+
 body {
     margin: 0;
-    background-image: url("./bg2.jpg");
+    background-color: $container-bg;
     background-size: contain;
 }
 
@@ -27,9 +85,10 @@ container {
     margin: 10vh 10vw 10vh 10vw;
     min-height: $container-height;
     min-width: $container-width;
-    background-image: url("./fg2.jpg");
+    //background-image: url("./fg2.jpg"); 
+    background-color: $container-fg;
     background-size: 100%;
-    box-shadow: 0px 0px 20px 14px;
+    box-shadow: 0px 0px 20px 14px $container-fg;
 }
 
 /* —————————————————————————————————— LEVEL 1 —————————————————————————————————— */
@@ -38,11 +97,11 @@ container {
 // Setup diodes for level 1 (4 diodes)
 @include setupDiodes(4, 1);
 
-/*
-   direction :
-     * 1 = droite
-     * 2 = gauche
-*/
+
+//    direction :
+//      * 1 = droite
+//      * 2 = gauche
+
 
 // LAYER 1
 $cables-layer-1 : 1,
@@ -77,29 +136,42 @@ $gates : ($gates-layer-1, $gates-layer-2);
 
 /* —————————————————————————————————— LEVEL 2 —————————————————————————————————— */
 @include setupLevel(2);
-@include setupDiodes(4, 2);
+@include setupDiodes(8, 2);
 
 // LAYER 1
-$cables-layer-1 : (1, 2, 1, 2);
+$cables-layer-1 : (1, 2, 1, 2, 1, 2, 1, 2);
 
 // LAYER 2
-$cables-layer-2 : (1, 2);
+$cables-layer-2 : (1, 2, 1, 2);
 
-$cables-layer-2-schema : (1, 1, 2, 2),
-(2, 2, a, a);
+$cables-layer-2-schema : (a, a, 2, 2, 2, 2, 2, 2),
+(2, 2, 1, 0, 2, 2, 2, 2),
+(2, 2, 2, 2, 0, 1, 2, 2),
+(2, 2, 2, 2, 2, 2, 1, 1);
 
 // LAYER 3
-$cables-layer-3 : 3;
+$cables-layer-3 : (1, 2);
 
-$cables-layer-3-schema : (1, 1, a, a),
-null;
+$cables-layer-3-schema : (a, a, 0, 0, 2, 2, 2, 2),
+(2, 2, 2, 2, 0, 1, 1, 1);
 
-$layers : ($cables-layer-1, $cables-layer-2, $cables-layer-3);
-$schemas : (null, $cables-layer-2-schema, $cables-layer-3-schema);
-@include setupCableLayers($layers, $schemas, 4, 2);
+// LAYER 4
+$cables-layer-4 : 3;
 
+$cables-layer-4-schema : (a, a, 0, 0, 0, 1, 1, 1),
+(null);
 
-@include setupVictory((1, 1, a, a), 2);
+$layers : ($cables-layer-1, $cables-layer-2, $cables-layer-3, $cables-layer-4);
+$schemas : (null, $cables-layer-2-schema, $cables-layer-3-schema, $cables-layer-4-schema);
+@include setupCableLayers($layers, $schemas, 8, 2);
+
+$gates-layer-1 : (0, 0, 0, 0);
+$gates-layer-2 : (0, 0);
+$gates-layer-3 : 0;
+$gates : ($gates-layer-1, $gates-layer-2, $gates-layer-3);
+@include setupGateLayers($gates, 8, 2);
+
+@include setupVictory((a, a, 0, 0, 0, 1, 1, 1), 2);
 
 /* —————————————————————————————————— LEVEL 3 —————————————————————————————————— */
 @include setupLevel(3);
@@ -125,11 +197,21 @@ $cables-layer-3-schema : (a, a, b, b, 2, 2, 2, 2),
 // LAYER 4
 $cables-layer-4 : 3;
 
-$cables-layer-4-schema : (a, a, b, b, c, c, 1, 1);
+$cables-layer-4-schema : (a, a, b, b, c, c, 1, 1),
+(null);
 
 $layers : ($cables-layer-1, $cables-layer-2, $cables-layer-3, $cables-layer-4);
 $schemas : (null, $cables-layer-2-schema, $cables-layer-3-schema, $cables-layer-4-schema);
 @include setupCableLayers($layers, $schemas, 8, 3);
 
+$gates-layer-1 : (0, 0, 0, 0);
+$gates-layer-2 : (0, 0);
+$gates-layer-3 : 0;
+$gates : ($gates-layer-1, $gates-layer-2, $gates-layer-3);
+@include setupGateLayers($gates, 8, 3);
 
 @include setupVictory((a, a, b, b, c, c, 1, 1), 3);
+
+/* —————————————————————————————————— VICTORY LEVEL —————————————————————————————————— */
+@include setupLevel(4);
+@include setupVictoryScreen();

@@ -4,22 +4,27 @@
 <head>
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-  <title>Jeu de la vie 2</title>
+  <title>Logiquement ...</title>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
   <link rel='stylesheet' type='text/css' media='screen' href='new_style.css'>
 </head>
 
 <body>
-
   <input type="checkbox" id="11" class="checkbox-1-level-1">
   <input type="checkbox" id="21" class="checkbox-2-level-1">
   <input type="checkbox" id="31" class="checkbox-3-level-1">
   <input type="checkbox" id="41" class="checkbox-4-level-1">
+  <input type="checkbox" id="confirm-level-1" class="checkbox-confirm-level-1">
 
   <input type="checkbox" id="12" class="checkbox-1-level-2">
   <input type="checkbox" id="22" class="checkbox-2-level-2">
   <input type="checkbox" id="32" class="checkbox-3-level-2">
   <input type="checkbox" id="42" class="checkbox-4-level-2">
+  <input type="checkbox" id="52" class="checkbox-5-level-2">
+  <input type="checkbox" id="62" class="checkbox-6-level-2">
+  <input type="checkbox" id="72" class="checkbox-7-level-2">
+  <input type="checkbox" id="82" class="checkbox-8-level-2">
+  <input type="checkbox" id="confirm-level-2" class="checkbox-confirm-level-2">
 
   <input type="checkbox" id="13" class="checkbox-1-level-3">
   <input type="checkbox" id="23" class="checkbox-2-level-3">
@@ -29,20 +34,33 @@
   <input type="checkbox" id="63" class="checkbox-6-level-3">
   <input type="checkbox" id="73" class="checkbox-7-level-3">
   <input type="checkbox" id="83" class="checkbox-8-level-3">
+  <input type="checkbox" id="confirm-level-3" class="checkbox-confirm-level-3">
 
+  <div class="header">
+    Logiquement ...
+    <br>
+    Niveau
+  </div>
   <container>
     <wrapper-level-1>
+      <popup-level-1>
+        <h1>
+        </h1>
+        <label class="popup-label-level-1" for="confirm-level-1">
+
+        </label>
+      </popup-level-1>
       <level-1>
-        <div class="victory-level-1"> VICTOIRE </div>
+        <div class="victory-level-1"> <span>VICTOIRE</span> </div>
 
         <div class="cable-1-layer-3-level-1"></div>
 
         <div class="cable-1-layer-2-level-1"></div>
         <div class="cable-2-layer-2-level-1"></div>
 
-        <div class="gate-1-layer-2-level-1"></div>
-        <div class="gate-1-layer-1-level-1"></div>
-        <div class="gate-2-layer-1-level-1"></div>
+        <div class="gate-1-layer-2-level-1 and"></div>
+        <div class="gate-1-layer-1-level-1 and"></div>
+        <div class="gate-2-layer-1-level-1 and"></div>
 
         <div class="cable-1-layer-1-level-1"></div>
         <div class="cable-2-layer-1-level-1"></div>
@@ -57,41 +75,86 @@
     </wrapper-level-1>
 
     <wrapper-level-2>
+      <popup-level-2>
+        <h1>
+        </h1>
+        <label class="popup-label-level-2" for="confirm-level-2">
+
+        </label>
+      </popup-level-2>
       <level-2>
-        <div class="victory-level-2"> VICTOIRE </div>
+        <div class="victory-level-2"> <span>VICTOIRE</span> </div>
+
+        <div class="cable-1-layer-4-level-2"></div>
+
+        <div class="gate-1-layer-3-level-2 and"></div>
 
         <div class="cable-1-layer-3-level-2"></div>
+        <div class="cable-2-layer-3-level-2"></div>
+
+        <div class="gate-1-layer-2-level-2 myst"></div>
+        <div class="gate-2-layer-2-level-2 and"></div>
 
         <div class="cable-1-layer-2-level-2"></div>
         <div class="cable-2-layer-2-level-2"></div>
+        <div class="cable-3-layer-2-level-2"></div>
+        <div class="cable-4-layer-2-level-2"></div>
 
-        <div class="gate-1-layer-2-level-2"></div> <!-- OR -->
-        <div class="gate-1-layer-1-level-2"></div> <!-- OR -->
-        <div class="gate-2-layer-1-level-2"></div> <!-- AND -->
+        <div class="gate-1-layer-1-level-2 or"></div>
+        <div class="gate-2-layer-1-level-2 myst"></div>
+        <div class="gate-3-layer-1-level-2 myst"></div>
+        <div class="gate-4-layer-1-level-2 and"></div>
 
         <div class="cable-1-layer-1-level-2"></div>
         <div class="cable-2-layer-1-level-2"></div>
         <div class="cable-3-layer-1-level-2"></div>
         <div class="cable-4-layer-1-level-2"></div>
+        <div class="cable-5-layer-1-level-2"></div>
+        <div class="cable-6-layer-1-level-2"></div>
+        <div class="cable-7-layer-1-level-2"></div>
+        <div class="cable-8-layer-1-level-2"></div>
 
         <label class="diode-1-level-2" for="12"></label>
         <label class="diode-2-level-2" for="22"></label>
         <label class="diode-3-level-2" for="32"></label>
         <label class="diode-4-level-2" for="42"></label>
+        <label class="diode-5-level-2" for="52"></label>
+        <label class="diode-6-level-2" for="62"></label>
+        <label class="diode-7-level-2" for="72"></label>
+        <label class="diode-8-level-2" for="82"></label>
       </level-2>
     </wrapper-level-2>
 
     <wrapper-level-3>
+      <popup-level-3>
+        <h1>
+        </h1>
+        <label class="popup-label-level-3" for="confirm-level-3">
+
+        </label>
+      </popup-level-3>
       <level-3>
-        <div class="victory-level-3"> VICTOIRE </div>
+        <div class="victory-level-3"> <span>VICTOIRE</span> </div>
+
+        <div class="cable-1-layer-4-level-3"></div>
+
+        <div class="gate-1-layer-3-level-3 and"></div>
 
         <div class="cable-1-layer-3-level-3"></div>
         <div class="cable-2-layer-3-level-3"></div>
+
+        <div class="gate-1-layer-2-level-3 and"></div>
+        <div class="gate-2-layer-2-level-3 and"></div>
 
         <div class="cable-1-layer-2-level-3"></div>
         <div class="cable-2-layer-2-level-3"></div>
         <div class="cable-3-layer-2-level-3"></div>
         <div class="cable-4-layer-2-level-3"></div>
+
+        <div class="gate-1-layer-1-level-3 or"></div>
+        <div class="gate-2-layer-1-level-3 or"></div>
+        <div class="gate-3-layer-1-level-3 or"></div>
+        <div class="gate-4-layer-1-level-3 and"></div>
 
         <div class="cable-1-layer-1-level-3"></div>
         <div class="cable-2-layer-1-level-3"></div>
@@ -112,6 +175,12 @@
         <label class="diode-8-level-3" for="83"></label>
       </level-3>
     </wrapper-level-3>
+    <wrapper-level-4>
+      <div class="mark"></div>
+      <div class="cup">
+        <input type="text" placeholder="Votre nom">
+      </div>
+    </wrapper-level-4>
   </container>
 </body>
 
